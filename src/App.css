@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -12,7 +13,8 @@
   color: white;
   flex: 1;
   min-height: 100vh;
-  animation: roll-credits 10s linear infinite;
+  animation: roll-credits 20s linear infinite;
+  padding: 0 20px;
 }
 
 .App-header {
@@ -26,7 +28,6 @@
   color: white;
 }
 
-/* this should be centered horizontally and vertically */
 .App-link {
   position: absolute;
   top: 50%;
@@ -36,6 +37,11 @@
   border-radius: 5px;
   color: white;
   cursor: pointer;
+}
+/* on hover scale App-link and change the background */
+.App-link:hover {
+  transform: scale(1.2);
+  background: #0c040b;
 }
 
 .flip-enter {

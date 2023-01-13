@@ -14,7 +14,19 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="App-subheader"> here </div>
+        <div className="App-subheader">
+          <br />
+          <br />
+          <p>Play a mystery game with family or friends</p>
+          <br />
+          <p>Leave the screen behind and play live</p>
+          <br />
+          <p>Theres a bunch of text here</p>
+          <br />
+          <p>Theres a bunch of text here</p>
+          <br />
+          <p>Theres a bunch of text here</p>
+        </div>
         <CSSTransition
           in={isFlipped}
           timeout={300}
