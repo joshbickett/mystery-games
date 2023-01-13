@@ -17,15 +17,13 @@ const App = () => {
         <div className="App-subheader">
           <br />
           <br />
-          <p>Play a mystery game with family or friends</p>
+          <p>Gather family or friends for some fun!</p>
           <br />
           <p>Leave the screen behind and play live</p>
           <br />
-          <p>Theres a bunch of text here</p>
           <br />
-          <p>Theres a bunch of text here</p>
           <br />
-          <p>Theres a bunch of text here</p>
+          <p>Try something different</p>
         </div>
         <CSSTransition
           in={isFlipped}
@@ -45,7 +43,21 @@ const App = () => {
             ENTER
           </div>
         )}
-        <div className="App-subheader "> here </div>
+        <div className="App-subheader ">
+          <p>Play a murder mystery game</p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <p>Many games available!</p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <p>Enter now to browse</p>
+        </div>
       </header>
     </div>
   );
