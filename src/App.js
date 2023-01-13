@@ -1,10 +1,10 @@
 import { CSSTransition } from "react-transition-group";
 import { getMansionImage } from "./utils/rss/imageManager";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const img = getMansionImage();
+  const [img, setImg] = useState(getMansionImage());
   const [isFlipped, setIsFlipped] = useState(true);
 
   const handleFlip = () => {
@@ -27,9 +27,11 @@ const App = () => {
           />
         </CSSTransition>
 
-        <div className="App-link" onClick={handleFlip}>
-          Enter
-        </div>
+        {isFlipped && (
+          <div className="App-link" onClick={handleFlip}>
+            ENTER
+          </div>
+        )}
       </header>
     </div>
   );

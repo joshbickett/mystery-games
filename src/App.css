@@ -19,8 +19,16 @@
   color: white;
 }
 
+/* this should be centered horizontally and vertically */
 .App-link {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  background: black;
+  padding: 5px 10px;
+  border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 
 .flip-enter {
@@ -28,14 +36,14 @@
 }
 .flip-enter-active {
   transform: rotateY(0deg);
-  transition: transform 300ms;
+  transition: transform 500ms;
 }
 .flip-exit {
   transform: rotateY(0deg);
 }
 .flip-exit-active {
   transform: rotateY(90deg);
-  transition: transform 300ms;
+  transition: transform 500ms;
 }
 
 @keyframes App-logo-spin {
