@@ -14,6 +14,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <div className="App-subheader"> here </div>
         <CSSTransition
           in={isFlipped}
           timeout={300}
@@ -23,7 +24,7 @@ const App = () => {
           <img
             src={img}
             alt="enter"
-            style={{ width: "400px", borderRadius: "6px" }}
+            style={{ width: "400px", borderRadius: "6px", flex: "1" }}
           />
         </CSSTransition>
 
@@ -32,6 +33,7 @@ const App = () => {
             ENTER
           </div>
         )}
+        <div className="App-subheader "> here </div>
       </header>
     </div>
   );

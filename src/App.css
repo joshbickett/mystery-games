@@ -8,11 +8,17 @@
   }
 }
 
+.App-subheader {
+  color: white;
+  flex: 1;
+  min-height: 100vh;
+}
+
 .App-header {
   background-color: #0c040b;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
