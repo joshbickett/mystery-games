@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { CSSTransition } from "react-transition-group";
+import { getMansionImage } from "./utils/rss/imageManager";
+import { useState } from "react";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const img = getMansionImage();
+  const [isFlipped, setIsFlipped] = useState(true);
+
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <CSSTransition
+          in={isFlipped}
+          timeout={300}
+          classNames="flip"
+          unmountOnExit
         >
-          Learn React
-        </a>
+          <img
+            src={img}
+            alt="enter"
+            style={{ width: "400px", borderRadius: "6px" }}
+          />
+        </CSSTransition>
+
+        <div className="App-link" onClick={handleFlip}>
+          Enter
+        </div>
       </header>
     </div>
   );
-}
+};
 
 export default App;
