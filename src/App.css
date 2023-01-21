@@ -1,6 +1,25 @@
-.App {
-  text-align: center;
+.main {
+  min-height: 100vh;
+  background-color: slategrey;
+  color: white;
   overflow: hidden;
+}
+
+.nav-items {
+  cursor: pointer;
+  padding: 10px;
+
+  color: white;
+  border-radius: 15px;
+  user-select: none;
+}
+
+.nav-items:hover {
+  background-color: black;
+}
+
+.nav-items:active {
+  scale: 1.02;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -9,23 +28,24 @@
   }
 }
 
-.App-subheader {
-  color: white;
+.subheader {
   flex: 1;
   min-height: 100vh;
   animation: roll-credits 20s linear infinite;
   padding: 0 20px;
 }
 
-.App-header {
-  background-color: #0c040b;
+.enter-container {
   min-height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  background-color: #0c040b;
   color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
 .App-link {
@@ -35,7 +55,6 @@
   background: black;
   padding: 5px 10px;
   border-radius: 5px;
-  color: white;
   cursor: pointer;
 }
 /* on hover scale App-link and change the background */
