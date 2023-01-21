@@ -17,11 +17,6 @@ export const Home = () => {
   const handleFlip = async () => {
     console.log("handle flip");
     // setIsFlipped(!isFlipped);
-    // const newImg = getMansionImage();
-    // setImg(newImg);
-    // const randomGame = Math.random() > 0.5 ? 0 : Math.random() > 0.5 ? 1 : 2;
-    // console.log("random game", randomGame);
-    // setHeroGame(randomGame);
 
     setIsFlipped(!isFlipped);
     setTimeout(async () => {
@@ -38,8 +33,21 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    handleFlip();
-  }, []);
+    const interval = setInterval(() => {
+      setIsFlipped(!isFlipped);
+      const newImg = getMansionImage();
+      const randomGame = Math.random() > 0.5 ? 0 : Math.random() > 0.5 ? 1 : 2;
+      console.log("random game", randomGame);
+      setTimeout(() => {
+        setImg(newImg);
+
+        setHeroGame(randomGame);
+      }, 300);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isFlipped]);
+
   return (
     <div className="main">
       <div
@@ -118,7 +126,6 @@ export const Home = () => {
             <img
               src={img}
               alt="enter"
-              onClick={handleFlip}
               style={{ width: "100px", borderRadius: "6px", flex: "1" }}
             />
           </CSSTransition>
