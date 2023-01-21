@@ -31,15 +31,7 @@ export const Home = () => {
 
   return (
     <Container>
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          alignItems: "center",
-          gap: 20,
-          backgroundColor: "#24292f",
-        }}
-      >
+      <NavContainer>
         <div
           style={{
             display: "flex",
@@ -55,24 +47,13 @@ export const Home = () => {
             alt="mansion"
             style={{ width: "100px", borderRadius: "6px" }}
           />
-          <h2 style={{ userSelect: "none", cursor: "pointer" }}>
-            Mystery Games
-          </h2>
+          <BrandHeader>Mystery Games</BrandHeader>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexGrow: 1,
-            alignItems: "center",
-            justifyContent: "flex-end",
-            gap: 25,
-            padding: "10px 50px",
-          }}
-        >
+        <NavItemContainer>
           <NavItem>Browse Games</NavItem>
           <NavItem>About</NavItem>
-        </div>
-      </div>
+        </NavItemContainer>
+      </NavContainer>
       <HeroContainer>
         <HeroLeft>
           <h1>Discover games to play with family and friends</h1>
@@ -117,32 +98,80 @@ const NavItem = styled.h2`
   }
 `;
 
-const HeroContainer = styled.div`
+const NavContainer = styled.div`
   display: flex;
-  height: 300px;
   width: 100%;
+  align-items: center;
+  gap: 20px;
+  background-color: #24292f;
+`;
+
+/* style={{
+            display: "flex",
+            flexGrow: 1,
+            alignItems: "center",
+            justifyContent: "flex-end",
+            gap: 25,
+            padding: "10px 50px",
+          }} */
+
+const NavItemContainer = styled.div`
+  display: flex;
+  flexgrow: 1;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25;
+  padding: 10px 50px;
+  @media (max-width: 768px) {
+    gap: 25;
+    padding: 10px 40px;
+  }
+`;
+
+const BrandHeader = styled.h2`
+  user-select: none;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+// make it flex if mobile
+const HeroContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 300px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 `;
 
 const HeroLeft = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: flex-start;
-  padding: 75px;
+  padding: 10px 75px;
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
-
-/* style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            padding: "75px",
-          }} */
 
 const HeroRight = styled.div`
   display: flex;
   flex-direction: column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 75px;
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
