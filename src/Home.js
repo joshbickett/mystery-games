@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import MansionImg from "./images/mansion-1.jpeg";
 import { CSSTransition } from "react-transition-group";
 import { getMansionImage, getGames } from "./utils/rss/gamesManager";
+import styled from "@emotion/styled";
 
 const games = getGames();
 let gameIndex = 0;
@@ -29,7 +30,7 @@ export const Home = () => {
   }, [isFlipped]);
 
   return (
-    <div className="main">
+    <Container>
       <div
         style={{
           display: "flex",
@@ -68,8 +69,8 @@ export const Home = () => {
             padding: "10px 50px",
           }}
         >
-          <h2 className="nav-items">Browse Games</h2>
-          <h2 className="nav-items">About</h2>
+          <NavItem>Browse Games</NavItem>
+          <NavItem>About</NavItem>
         </div>
       </div>
       <div
@@ -112,6 +113,28 @@ export const Home = () => {
           <h1>{heroGame.name}</h1>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  min-height: 100vh;
+  background-color: #353c45;
+  color: white;
+  overflow: hidden;
+`;
+
+const NavItem = styled.div`
+  cursor: pointer;
+  padding: 10px;
+
+  color: white;
+  border-radius: 15px;
+  user-select: none;
+  &:hover {
+    background-color: black;
+  }
+  &:active {
+    scale: 1.02;
+  }
+`;
