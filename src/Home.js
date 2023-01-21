@@ -34,7 +34,7 @@ export const Home = () => {
           width: "100%",
           alignItems: "center",
           gap: 20,
-          backgroundColor: "darkslategrey",
+          backgroundColor: "#24292f",
         }}
       >
         <div
