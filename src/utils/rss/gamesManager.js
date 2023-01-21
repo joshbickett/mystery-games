@@ -4,6 +4,13 @@ import MansionThree from "../../images/mansion-3.jpeg";
 import MansionFour from "../../images/mansion-4.jpeg";
 import MansionFive from "../../images/mansion-5.jpeg";
 
+// const gameArray = [
+//   "Night at the Opera",
+//   "An evening in 2142",
+//   "Pirates game",
+//   "1920s funnies",
+// ];
+
 export const getMansionImage = () => {
   const array = [
     MansionOne,
@@ -14,4 +21,14 @@ export const getMansionImage = () => {
   ];
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
+};
+
+export const getGames = () => {
+  console.log("get games");
+  return [
+    { name: "Night at the Opera", img: MansionOne },
+    { name: "An evening in the year 3000", img: MansionTwo },
+    { name: "Pirates game", img: MansionThree },
+    { name: "1920s funnies", img: MansionFour },
+  ];
 };
