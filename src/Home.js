@@ -24,7 +24,7 @@ export const Home = () => {
         console.log("new hero game", newHeroGame);
         setHeroGame(newHeroGame);
       }, 250);
-    }, 2000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [isFlipped]);
@@ -73,36 +73,14 @@ export const Home = () => {
           <NavItem>About</NavItem>
         </div>
       </div>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          height: "250px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            justifyContent: "center",
-            flexDirection: "column",
-            padding: "75px",
-          }}
-        >
+      <HeroContainer>
+        <HeroLeft>
           <h1>Discover games to play with family and friends</h1>
           <p style={{ padding: 0, margin: 0 }}>
             Enjoy a night of getting into character and solving a mystery.
           </p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            padding: "75px",
-          }}
-        >
+        </HeroLeft>
+        <HeroRight>
           <CSSTransition in={!isFlipped} timeout={300} classNames="flip">
             <img
               src={heroGame.img}
@@ -111,8 +89,8 @@ export const Home = () => {
             />
           </CSSTransition>
           <h1>{heroGame.name}</h1>
-        </div>
-      </div>
+        </HeroRight>
+      </HeroContainer>
     </Container>
   );
 };
@@ -124,7 +102,7 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
-const NavItem = styled.div`
+const NavItem = styled.h2`
   cursor: pointer;
   padding: 10px;
 
@@ -137,4 +115,34 @@ const NavItem = styled.div`
   &:active {
     scale: 1.02;
   }
+`;
+
+const HeroContainer = styled.div`
+  display: flex;
+  height: 300px;
+  width: 100%;
+`;
+
+const HeroLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 75px;
+`;
+
+/* style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            padding: "75px",
+          }} */
+
+const HeroRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 75px;
 `;
