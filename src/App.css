@@ -4,19 +4,6 @@
   }
 }
 
-.enter-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  background-color: #131619;
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
-
 .App-link {
   position: absolute;
   top: 50%;
@@ -45,13 +32,6 @@
 .flip-exit-active {
   transform: rotateY(90deg);
   transition: transform 500ms;
-}
-
-.subheader {
-  flex: 1;
-  min-height: 100vh;
-  animation: roll-credits 20s linear infinite;
-  padding: 0 20px;
 }
 
 @keyframes roll-credits {
