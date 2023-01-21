@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import MansionImg from "./images/mansion-1.jpeg";
 import { CSSTransition } from "react-transition-group";
 import { getMansionImage } from "./utils/rss/imageManager";
@@ -13,19 +13,32 @@ export const Home = () => {
     "Pirates game",
   ];
 
-  const handleFlip = () => {
-    if (!isFlipped) {
-      setIsFlipped(true);
-      const newImg = getMansionImage();
-      setImg(newImg);
-      const randomGame = Math.random() > 0.5 ? 0 : Math.random() > 0.5 ? 1 : 2;
-      console.log("random game", randomGame);
-      setHeroGame(randomGame);
-    }
-    setTimeout(() => {
-      setIsFlipped(false);
-    }, [4000]);
+  const handleFlip = async () => {
+    console.log("handle flip");
+    // setIsFlipped(!isFlipped);
+    // const newImg = getMansionImage();
+    // setImg(newImg);
+    // const randomGame = Math.random() > 0.5 ? 0 : Math.random() > 0.5 ? 1 : 2;
+    // console.log("random game", randomGame);
+    // setHeroGame(randomGame);
+
+    setIsFlipped(!isFlipped);
+    setTimeout(async () => {
+      await handleFlip();
+    }, 4000);
+    // setTimeout(() => {
+    //   setIsFlipped(false);
+    //   handleFlip();
+    // }, [2000]);
+
+    // setTimeout(() => {
+    //   handleFlip();
+    // }, [2000]);
   };
+
+  useEffect(() => {
+    handleFlip();
+  }, []);
   return (
     <div className="main">
       <div
@@ -104,7 +117,7 @@ export const Home = () => {
             <img
               src={img}
               alt="enter"
-              onMouseOver={handleFlip}
+              onClick={handleFlip}
               style={{ width: "100px", borderRadius: "6px", flex: "1" }}
             />
           </CSSTransition>
