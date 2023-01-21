@@ -11,6 +11,7 @@ export const Home = () => {
     "Night at the Opera",
     "An evening in 2142",
     "Pirates game",
+    "1920s funnies",
   ];
 
   const handleFlip = async () => {
