@@ -16,13 +16,13 @@ export const Home = () => {
       setIsFlipped(!isFlipped);
 
       setTimeout(() => {
-        if (gameIndex < games.length) gameIndex += 1;
+        if (gameIndex < games.length - 1) gameIndex += 1;
         else gameIndex = 0;
         console.log("game index", gameIndex);
         const newHeroGame = games[gameIndex];
         console.log("new hero game", newHeroGame);
         setHeroGame(newHeroGame);
-      }, 300);
+      }, 250);
     }, 2000);
 
     return () => clearInterval(interval);
@@ -104,12 +104,12 @@ export const Home = () => {
         >
           <CSSTransition in={!isFlipped} timeout={300} classNames="flip">
             <img
-              src={img}
+              src={heroGame.img}
               alt="enter"
               style={{ width: "100px", borderRadius: "6px", flex: "1" }}
             />
           </CSSTransition>
-          <h1>{heroGame?.name}</h1>
+          <h1>{heroGame.name}</h1>
         </div>
       </div>
     </div>
