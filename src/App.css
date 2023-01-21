@@ -4,13 +4,6 @@
   }
 }
 
-.subheader {
-  flex: 1;
-  min-height: 100vh;
-  animation: roll-credits 20s linear infinite;
-  padding: 0 20px;
-}
-
 .enter-container {
   min-height: 100vh;
   display: flex;
@@ -54,13 +47,11 @@
   transition: transform 500ms;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subheader {
+  flex: 1;
+  min-height: 100vh;
+  animation: roll-credits 20s linear infinite;
+  padding: 0 20px;
 }
 
 @keyframes roll-credits {

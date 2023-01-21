@@ -2,7 +2,7 @@ import { CSSTransition } from "react-transition-group";
 import { getMansionImage } from "./utils/rss/gamesManager";
 import { useEffect, useState } from "react";
 
-export const Enterance = ({ setEntered }) => {
+export const Entrance = ({ setEntered }) => {
   const img = getMansionImage();
   const [isFlipped, setIsFlipped] = useState(false);
 

@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "./App.css";
-import { Enterance } from "./Enterance";
+import { Entrance } from "./Entrance";
 import { Home } from "./Home";
 
 const App = () => {
-  const [entered, setEntered] = useState(true);
+  const [entered, setEntered] = useState(false);
   return (
     <div>
-      {!entered && <Enterance setEntered={setEntered} />}
+      {!entered && <Entrance setEntered={setEntered} />}
       {entered && <Home />}
     </div>
   );
