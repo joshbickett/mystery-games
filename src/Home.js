@@ -1,49 +1,29 @@
 import { useCallback, useEffect, useState } from "react";
 import MansionImg from "./images/mansion-1.jpeg";
 import { CSSTransition } from "react-transition-group";
-import { getMansionImage } from "./utils/rss/imageManager";
+import { getMansionImage, getGames } from "./utils/rss/gamesManager";
 
+const games = getGames();
+let gameIndex = 0;
 export const Home = () => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [img, setImg] = useState(getMansionImage());
-  const [heroGame, setHeroGame] = useState(0);
-  const gameArray = [
-    "Night at the Opera",
-    "An evening in 2142",
-    "Pirates game",
-    "1920s funnies",
-  ];
 
-  const handleFlip = async () => {
-    console.log("handle flip");
-    // setIsFlipped(!isFlipped);
-
-    setIsFlipped(!isFlipped);
-    setTimeout(async () => {
-      await handleFlip();
-    }, 4000);
-    // setTimeout(() => {
-    //   setIsFlipped(false);
-    //   handleFlip();
-    // }, [2000]);
-
-    // setTimeout(() => {
-    //   handleFlip();
-    // }, [2000]);
-  };
+  const [heroGame, setHeroGame] = useState(games[0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsFlipped(!isFlipped);
-      const newImg = getMansionImage();
-      const randomGame = Math.random() > 0.5 ? 0 : Math.random() > 0.5 ? 1 : 2;
-      console.log("random game", randomGame);
-      setTimeout(() => {
-        setImg(newImg);
 
-        setHeroGame(randomGame);
+      setTimeout(() => {
+        if (gameIndex < games.length) gameIndex += 1;
+        else gameIndex = 0;
+        console.log("game index", gameIndex);
+        const newHeroGame = games[gameIndex];
+        console.log("new hero game", newHeroGame);
+        setHeroGame(newHeroGame);
       }, 300);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [isFlipped]);
@@ -129,7 +109,7 @@ export const Home = () => {
               style={{ width: "100px", borderRadius: "6px", flex: "1" }}
             />
           </CSSTransition>
-          <h1>{gameArray[heroGame]}</h1>
+          <h1>{heroGame?.name}</h1>
         </div>
       </div>
     </div>
