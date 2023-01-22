@@ -4,7 +4,7 @@ import { Entrance } from "./Entrance";
 import { Home } from "./Home";
 
 const App = () => {
-  const [entered, setEntered] = useState(false);
+  const [entered, setEntered] = useState(true);
   return (
     <div>
       {!entered && <Entrance setEntered={setEntered} />}

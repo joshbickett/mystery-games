@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import KeyImg from "./images/key-5.jpeg";
+import BrandLogoImage from "./images/brand-logo.png";
 import { CSSTransition } from "react-transition-group";
 import { getMansionImage, getGames } from "./utils/rss/gamesManager";
 import styled from "@emotion/styled";
@@ -42,14 +43,13 @@ export const Home = () => {
           }}
         >
           <img
-            src={KeyImg}
+            src={BrandLogoImage}
             alt="mansion"
-            style={{ width: "100px", height: "100px", borderRadius: "75%" }}
+            style={{ width: "300px", borderRadius: "16px" }}
           />
-          <BrandHeader>Mystery Games</BrandHeader>
         </div>
         <NavItemContainer>
-          <NavItem>Browse Games</NavItem>
+          <NavItem>Browse</NavItem>
           <NavItem>About</NavItem>
         </NavItemContainer>
       </NavContainer>
@@ -86,7 +86,7 @@ const Container = styled.div`
 
 const NavItem = styled.h2`
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 40px;
 
   color: white;
   border-radius: 15px;
@@ -104,8 +104,7 @@ const NavContainer = styled.div`
   width: 100%;
   align-items: center;
   gap: 20px;
-  background-color: #151215;
-  opacity: 0.9;
+  background-color: #0e0a0e;
   color: white;
 `;
 
@@ -114,7 +113,6 @@ const NavItemContainer = styled.div`
   flexgrow: 1;
   align-items: center;
   justify-content: flex-end;
-  gap: 25;
   padding: 10px 50px;
   @media (max-width: 768px) {
     gap: 25;
@@ -151,6 +149,8 @@ const HeroLeft = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 10px 75px;
+  background-color: #3e3a3e;
+  color: white;
   @media (max-width: 768px) {
     align-items: center;
     text-align: center;
