@@ -71,10 +71,61 @@ export const Home = () => {
           <h1>{heroGame.name}</h1>
         </HeroRight>
       </HeroContainer>
+      <CharacterExplorerContainer>
+        <CharacterLeft>
+          <img
+            src={heroGame.img}
+            alt="enter"
+            style={{ width: "100px", borderRadius: "6px", flex: "1" }}
+          />
+        </CharacterLeft>
+        <CharacterRight>
+          <h1>Character Explorer</h1>
+          <p>Meet the players</p>
+        </CharacterRight>
+      </CharacterExplorerContainer>
     </Container>
   );
 };
 
+const CharacterExplorerContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 300px;
+  background-color: #ffffff;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+`;
+
+const CharacterLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 75px;
+
+  color: white;
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
+`;
+const CharacterRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 75px;
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
+`;
 // opacity just a little
 const Container = styled.div`
   min-height: 100vh;
