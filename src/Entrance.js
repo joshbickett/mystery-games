@@ -40,7 +40,7 @@ export const Entrance = ({ setEntered }) => {
 
   return (
     <Container>
-      <h1>Enter</h1>
+      <h2>Enter</h2>
 
       <CSSTransition
         in={!isFlipped}
