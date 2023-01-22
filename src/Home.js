@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import MansionImg from "./images/mansion-1.jpeg";
+import KeyImg from "./images/key-5.jpeg";
 import { CSSTransition } from "react-transition-group";
 import { getMansionImage, getGames } from "./utils/rss/gamesManager";
 import styled from "@emotion/styled";
@@ -8,7 +8,6 @@ const games = getGames();
 let gameIndex = 0;
 export const Home = () => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [img, setImg] = useState(getMansionImage());
 
   const [heroGame, setHeroGame] = useState(games[0]);
 
@@ -43,9 +42,9 @@ export const Home = () => {
           }}
         >
           <img
-            src={MansionImg}
+            src={KeyImg}
             alt="mansion"
-            style={{ width: "100px", borderRadius: "6px" }}
+            style={{ width: "100px", height: "100px", borderRadius: "75%" }}
           />
           <BrandHeader>Mystery Games</BrandHeader>
         </div>
@@ -76,10 +75,12 @@ export const Home = () => {
   );
 };
 
+// opacity just a little
 const Container = styled.div`
   min-height: 100vh;
-  background-color: #353c45;
-  color: white;
+  background-color: #fbfbfb;
+
+  color: black;
   overflow: hidden;
 `;
 
@@ -103,17 +104,10 @@ const NavContainer = styled.div`
   width: 100%;
   align-items: center;
   gap: 20px;
-  background-color: #24292f;
+  background-color: #151215;
+  opacity: 0.9;
+  color: white;
 `;
-
-/* style={{
-            display: "flex",
-            flexGrow: 1,
-            alignItems: "center",
-            justifyContent: "flex-end",
-            gap: 25,
-            padding: "10px 50px",
-          }} */
 
 const NavItemContainer = styled.div`
   display: flex;
