@@ -3,7 +3,8 @@ import KeyImg from "./images/key-5.jpeg";
 import BrandLogoImage from "./images/brand-logo.png";
 import { CSSTransition } from "react-transition-group";
 import { getGames } from "./utils/rss/gamesManager";
-import OperaHouseImg from "./images/character-1.jpeg";
+import OperaCharacterOneImg from "./images/character-1.jpeg";
+import OperaCharacterTwoImg from "./images/character-2.jpeg";
 import styled from "@emotion/styled";
 
 const games = getGames();
@@ -86,14 +87,27 @@ export const Home = () => {
             justifyContent: "left",
           }}
         >
-          <img
-            src={OperaHouseImg}
-            alt="opera"
-            style={{ width: "200px", borderRadius: "6px" }}
-          />
-          <div style={{ padding: "10px" }}>
-            <h2>Jeromy Tim</h2>
-            <p>He's the main character</p>
+          <div style={{ margin: "10px" }}>
+            <img
+              src={OperaCharacterOneImg}
+              alt="opera"
+              style={{ width: "200px", borderRadius: "6px" }}
+            />
+            <div style={{ padding: "10px" }}>
+              <h2>Jeromy Tim</h2>
+              <p>He's the main character</p>
+            </div>
+          </div>
+          <div style={{ margin: "10px" }}>
+            <img
+              src={OperaCharacterTwoImg}
+              alt="opera"
+              style={{ width: "200px", borderRadius: "6px" }}
+            />
+            <div style={{ padding: "10px" }}>
+              <h2>Pat patrick</h2>
+              <p>He's another character</p>
+            </div>
           </div>
         </SplitLeft>
         <SplitRight></SplitRight>
