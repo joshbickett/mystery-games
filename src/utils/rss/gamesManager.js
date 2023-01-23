@@ -26,9 +26,13 @@ export const getMansionImage = () => {
 export const getGames = () => {
   console.log("get games");
   return [
-    { name: "Night at the Opera", img: MansionOne },
-    { name: "An evening in the year 3000", img: MansionTwo },
-    { name: "Pirates game", img: MansionThree },
-    { name: "1920s funnies", img: MansionFour },
+    { name: "Night at the Opera", img: MansionOne, subtext: "Available now!" },
+    {
+      name: "An evening in the year 3000",
+      img: MansionTwo,
+      subtext: "Coming soon",
+    },
+    { name: "Pirates game", img: MansionThree, subtext: "Coming soon" },
+    { name: "1920s funnies", img: MansionFour, subtext: "Coming soon" },
   ];
 };

@@ -2,7 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import KeyImg from "./images/key-5.jpeg";
 import BrandLogoImage from "./images/brand-logo.png";
 import { CSSTransition } from "react-transition-group";
-import { getMansionImage, getGames } from "./utils/rss/gamesManager";
+import { getGames } from "./utils/rss/gamesManager";
+import OperaHouseImg from "./images/character-1.jpeg";
 import styled from "@emotion/styled";
 
 const games = getGames();
@@ -53,14 +54,14 @@ export const Home = () => {
           <NavItem>About</NavItem>
         </NavItemContainer>
       </NavContainer>
-      <HeroContainer>
-        <HeroLeft>
+      <SplitContainer>
+        <SplitLeft>
           <h1>Discover games to play with family and friends</h1>
           <p style={{ padding: 0, margin: 0 }}>
             Enjoy a night of getting into character and solving a mystery.
           </p>
-        </HeroLeft>
-        <HeroRight>
+        </SplitLeft>
+        <SplitRight>
           <CSSTransition in={!isFlipped} timeout={300} classNames="flip">
             <img
               src={heroGame.img}
@@ -69,63 +70,38 @@ export const Home = () => {
             />
           </CSSTransition>
           <h1>{heroGame.name}</h1>
-        </HeroRight>
-      </HeroContainer>
-      <CharacterExplorerContainer>
-        <CharacterLeft>
+          <p style={{ padding: 0, margin: 0 }}>{heroGame.subtext}</p>
+        </SplitRight>
+      </SplitContainer>
+      <Row>
+        <h1>{games[0].name}</h1>
+        <p>Meet the players</p>
+      </Row>
+      <SplitContainer>
+        <SplitLeft
+          style={{
+            backgroundColor: "#fbfbfb",
+            color: "black",
+            flexDirection: "row",
+            justifyContent: "left",
+          }}
+        >
           <img
-            src={heroGame.img}
-            alt="enter"
-            style={{ width: "100px", borderRadius: "6px", flex: "1" }}
+            src={OperaHouseImg}
+            alt="opera"
+            style={{ width: "200px", borderRadius: "6px" }}
           />
-        </CharacterLeft>
-        <CharacterRight>
-          <h1>Character Explorer</h1>
-          <p>Meet the players</p>
-        </CharacterRight>
-      </CharacterExplorerContainer>
+          <div style={{ padding: "10px" }}>
+            <h2>Jeromy Tim</h2>
+            <p>He's the main character</p>
+          </div>
+        </SplitLeft>
+        <SplitRight></SplitRight>
+      </SplitContainer>
     </Container>
   );
 };
 
-const CharacterExplorerContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 300px;
-  background-color: #ffffff;
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-`;
-
-const CharacterLeft = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px 75px;
-
-  color: white;
-  @media (max-width: 768px) {
-    align-items: center;
-    text-align: center;
-  }
-`;
-const CharacterRight = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 75px;
-  @media (max-width: 768px) {
-    align-items: center;
-    text-align: center;
-  }
-`;
 // opacity just a little
 const Container = styled.div`
   min-height: 100vh;
@@ -148,6 +124,14 @@ const NavItem = styled.h2`
   &:active {
     scale: 1.02;
   }
+`;
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+  align-items: center;
+  width: 100%;
 `;
 
 const NavContainer = styled.div`
@@ -181,10 +165,9 @@ const BrandHeader = styled.h2`
 `;
 
 // make it flex if mobile
-const HeroContainer = styled.div`
+const SplitContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 300px;
 
   @media (max-width: 768px) {
     display: flex;
@@ -193,7 +176,7 @@ const HeroContainer = styled.div`
   }
 `;
 
-const HeroLeft = styled.div`
+const SplitLeft = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -208,7 +191,7 @@ const HeroLeft = styled.div`
   }
 `;
 
-const HeroRight = styled.div`
+const SplitRight = styled.div`
   display: flex;
   flex-direction: column;
   flex-direction: column;
