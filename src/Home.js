@@ -5,6 +5,7 @@ import { CSSTransition } from "react-transition-group";
 import { getGames } from "./utils/rss/gamesManager";
 import OperaCharacterOneImg from "./images/character-1.jpeg";
 import OperaCharacterTwoImg from "./images/character-2.jpeg";
+import OperaCharacterThreeImg from "./images/character-3.jpeg";
 import styled from "@emotion/styled";
 
 const games = getGames();
@@ -74,9 +75,9 @@ export const Home = () => {
           <p style={{ padding: 0, margin: 0 }}>{heroGame.subtext}</p>
         </SplitRight>
       </SplitContainer>
-      <Row>
-        <h1>{games[0].name}</h1>
-        <p>Meet the players</p>
+      <Row style={{ backgroundColor: "#bdb9be" }}>
+        <h1 style={{ margin: 0, marginBottom: "10px" }}>{games[0].name}</h1>
+        <p style={{ margin: 0, padding: 0 }}>Meet the players</p>
       </Row>
       <SplitContainer>
         <SplitLeft
@@ -87,7 +88,7 @@ export const Home = () => {
             justifyContent: "left",
           }}
         >
-          <div style={{ margin: "10px" }}>
+          <div>
             <img
               src={OperaCharacterOneImg}
               alt="opera"
@@ -125,6 +126,14 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
+/*style={{ margin: "10px" }} */
+const CharacterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+`;
+
 const NavItem = styled.h2`
   cursor: pointer;
   padding: 10px 40px;
@@ -143,7 +152,7 @@ const NavItem = styled.h2`
 const Row = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px 50px;
+  padding: 10px;
   align-items: center;
   width: 100%;
 `;
