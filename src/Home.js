@@ -51,10 +51,10 @@ export const Home = () => {
             style={{ width: "300px", borderRadius: "16px" }}
           />
         </div>
-        <NavItemContainer>
+        {/* <NavItemContainer>
           <NavItem>Browse</NavItem>
           <NavItem>About</NavItem>
-        </NavItemContainer>
+        </NavItemContainer> */}
       </NavContainer>
       <SplitContainer>
         <SplitLeft>

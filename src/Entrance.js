@@ -5,6 +5,8 @@ import styled from "@emotion/styled";
 
 const texts = ["Text 1", "Text 2", "Text 3"];
 
+const img = getMansionImage();
+
 export const Entrance = ({ setEntered }) => {
   const [text, setText] = useState("");
   const [top, setTop] = useState("0px");
@@ -23,7 +25,6 @@ export const Entrance = ({ setEntered }) => {
   //   return () => clearInterval(interval);
   // }, [visible]);
 
-  const img = getMansionImage();
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -34,26 +35,24 @@ export const Entrance = ({ setEntered }) => {
     if (isFlipped) {
       setTimeout(() => {
         setEntered(true);
-      }, [400]);
+      }, [1000]);
     }
   }, [isFlipped, setEntered]);
 
   return (
     <Container>
-      <h2>Enter</h2>
+      <h2 style={{ color: " #212427", padding: 0, margin: 0 }}>ENTER</h2>
+      <p style={{ color: " #212427", padding: "20px", margin: 0 }}>
+        Discover a world of games and mysteries.
+      </p>
 
       <CSSTransition
         in={!isFlipped}
-        timeout={300}
+        timeout={1000}
         classNames="flip"
         unmountOnExit
       >
-        <img
-          src={img}
-          alt="enter"
-          style={{ width: "200px", borderRadius: "6px" }}
-          onMouseOver={handleFlip}
-        />
+        <PlayingCard src={img} alt="enter" onClick={handleFlip} />
       </CSSTransition>
 
       <div></div>
@@ -68,10 +67,19 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  background-color: #131619;
-  color: white;
+  background-color: #ffffff;
+  color: black;
   text-align: center;
   overflow: hidden;
+`;
+
+const PlayingCard = styled.img`
+  width: 200px;
+  height: 300px;
+  border-radius: 16px;
+  &:hover {
+    scale: 1.1;
+  }
 `;
 
 /*  <div>
