@@ -37,9 +37,12 @@ export const Home = () => {
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
       </NavContainer>
+      <Separator />
       <SplitContainer>
         <SplitLeft style={{ backgroundColor: "black" }}>
-          <h1>Discover games to play with family and friends</h1>
+          <h3 style={{ fontSize: "25px" }}>
+            Discover games to play with family and friends
+          </h3>
           <p style={{ padding: 0, margin: 0 }}>
             Enjoy a night of getting into character and solving a mystery.
           </p>
@@ -52,14 +55,16 @@ export const Home = () => {
               style={{ width: "100px", borderRadius: "6px", flex: "1" }}
             />
           </CSSTransition>
-          <h1>{heroGame.name}</h1>
+          <h3 style={{ fontSize: "25px" }}>{heroGame.name}</h3>
           <p style={{ padding: 0, margin: 0 }}>{heroGame.subtext}</p>
         </SplitRight>
       </SplitContainer>
-      <Row style={{ backgroundColor: "#bdb9be" }}>
+      <Separator />
+      <FlexContainer style={{ padding: 10 }}>
         <h1 style={{ margin: 0, marginBottom: "10px" }}>{games[0].name}</h1>
         <p style={{ margin: 0, padding: 0 }}>Meet the players</p>
-      </Row>
+      </FlexContainer>
+
       <SplitContainer>
         <SplitLeft
           style={{
@@ -130,11 +135,19 @@ const NavItem = styled.h2`
   }
 `;
 
-const Row = styled.div`
+const Separator = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10px;
   align-items: center;
+  padding: 2px;
+  background-color: #5a5a5a;
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 `;
 
