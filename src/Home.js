@@ -158,6 +158,10 @@ const NavContainer = styled.div`
   gap: 20px;
   background-color: #ffffff;
   color: white;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 const NavItemContainer = styled.div`
