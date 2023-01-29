@@ -65,40 +65,36 @@ export const Home = () => {
         <p style={{ margin: 0, padding: 0 }}>Meet the players</p>
       </FlexContainer>
 
-      <SplitContainer>
-        <SplitLeft
-          style={{
-            backgroundColor: "#fbfbfb",
-            color: "black",
-            flexDirection: "row",
-            justifyContent: "left",
-          }}
-        >
-          <div>
-            <img
-              src={OperaCharacterOneImg}
-              alt="opera"
-              style={{ width: "200px", borderRadius: "6px" }}
-            />
-            <div style={{ padding: "10px" }}>
-              <h2>Jeromy Tim</h2>
-              <p>He's the main character</p>
-            </div>
+      <FlexContainer
+        style={{
+          flexDirection: "row",
+          justifyContent: "left",
+          padding: 10,
+        }}
+      >
+        <div>
+          <img
+            src={OperaCharacterOneImg}
+            alt="opera"
+            style={{ width: "200px", borderRadius: "6px" }}
+          />
+          <div style={{ padding: "10px" }}>
+            <h2>Jeromy Tim</h2>
+            <p>He's the main character</p>
           </div>
-          <div style={{ margin: "10px" }}>
-            <img
-              src={OperaCharacterTwoImg}
-              alt="opera"
-              style={{ width: "200px", borderRadius: "6px" }}
-            />
-            <div style={{ padding: "10px" }}>
-              <h2>Pat patrick</h2>
-              <p>He's another character</p>
-            </div>
+        </div>
+        <div style={{ margin: "10px" }}>
+          <img
+            src={OperaCharacterTwoImg}
+            alt="opera"
+            style={{ width: "200px", borderRadius: "6px" }}
+          />
+          <div style={{ padding: "10px" }}>
+            <h2>Pat patrick</h2>
+            <p>He's another character</p>
           </div>
-        </SplitLeft>
-        <SplitRight></SplitRight>
-      </SplitContainer>
+        </div>
+      </FlexContainer>
     </Container>
   );
 };
@@ -217,5 +213,6 @@ const SplitRight = styled.div`
   @media (max-width: 768px) {
     align-items: center;
     text-align: center;
+    padding: 25px;
   }
 `;
