@@ -35,26 +35,7 @@ export const Home = () => {
   return (
     <Container>
       <NavContainer>
-        <div
-          style={{
-            display: "flex",
-            flexGrow: 1,
-            alignItems: "center",
-            justifyContent: "flex-start",
-            gap: 25,
-            padding: "10px",
-          }}
-        >
-          <img
-            src={BrandLogoImage}
-            alt="mansion"
-            style={{ width: "300px", borderRadius: "16px" }}
-          />
-        </div>
-        {/* <NavItemContainer>
-          <NavItem>Browse</NavItem>
-          <NavItem>About</NavItem>
-        </NavItemContainer> */}
+        <BrandHeader src={BrandLogoImage} alt="mansion" />
       </NavContainer>
       <SplitContainer>
         <SplitLeft>
@@ -120,7 +101,7 @@ export const Home = () => {
 // opacity just a little
 const Container = styled.div`
   min-height: 100vh;
-  background-color: #fbfbfb;
+  background-color: #ffffff;
 
   color: black;
   overflow: hidden;
@@ -162,7 +143,7 @@ const NavContainer = styled.div`
   width: 100%;
   align-items: center;
   gap: 20px;
-  background-color: #0e0a0e;
+  background-color: #ffffff;
   color: white;
 `;
 
@@ -178,13 +159,9 @@ const NavItemContainer = styled.div`
   }
 `;
 
-const BrandHeader = styled.h2`
-  user-select: none;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
+const BrandHeader = styled.img`
+  width: 300px;
+  border-radius: 16px;
 `;
 
 // make it flex if mobile
