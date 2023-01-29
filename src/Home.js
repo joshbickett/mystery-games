@@ -38,13 +38,13 @@ export const Home = () => {
         <BrandHeader src={BrandLogoImage} alt="mansion" />
       </NavContainer>
       <SplitContainer>
-        <SplitLeft>
+        <SplitLeft style={{ backgroundColor: "black" }}>
           <h1>Discover games to play with family and friends</h1>
           <p style={{ padding: 0, margin: 0 }}>
             Enjoy a night of getting into character and solving a mystery.
           </p>
         </SplitLeft>
-        <SplitRight>
+        <SplitRight style={{ backgroundColor: "#ffffff" }}>
           <CSSTransition in={!isFlipped} timeout={300} classNames="flip">
             <img
               src={heroGame.img}
@@ -183,7 +183,6 @@ const SplitLeft = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 10px 75px;
-  background-color: #3e3a3e;
   color: white;
   @media (max-width: 768px) {
     align-items: center;

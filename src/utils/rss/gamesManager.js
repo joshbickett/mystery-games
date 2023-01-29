@@ -28,11 +28,9 @@ export const getGames = () => {
   return [
     { name: "Night at the Opera", img: MansionOne, subtext: "Available now!" },
     {
-      name: "An evening in the year 3000",
+      name: "Additional Games",
       img: MansionTwo,
       subtext: "Coming soon",
     },
-    { name: "Pirates game", img: MansionThree, subtext: "Coming soon" },
-    { name: "1920s funnies", img: MansionFour, subtext: "Coming soon" },
   ];
 };
