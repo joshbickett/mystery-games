@@ -97,7 +97,7 @@ const PlayingCardFlipped = styled.div`
   background-color: #0b0000;
   color: white;
   border-radius: 16px;
-  width: 325px;
+  width: 335px;
   height: 500px;
   display: flex;
   flex-direction: column;
