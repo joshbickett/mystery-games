@@ -38,7 +38,7 @@ export const Entrance = ({ setEntered }) => {
             backgroundPosition: "center",
           }}
         >
-          <h3 style={{ padding: 0, margin: 0 }}>ENTER</h3>
+          <h3 style={{ padding: 0, margin: 0 }}>CLICK TO ENTER</h3>
           <p style={{ padding: "10px", margin: 0 }}>
             Discover a world of games and mysteries.
           </p>
