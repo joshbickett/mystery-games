@@ -37,7 +37,7 @@ export const Home = () => {
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
         <NavSubText>
-          <i>Developed with AI</i>
+          <i>Developed in partnership between Humans and AI (HI & AI)</i>
         </NavSubText>
       </NavContainer>
       <Separator />
@@ -133,6 +133,10 @@ export const Home = () => {
           </div>
         </SplitRight>
       </SplitContainer>
+      <FlexContainer style={{ paddingBottom: "200px" }}>
+        <h4>Share your email below to get the Free Mystery Game!</h4>
+        <input type="text" placeholder="Email" />
+      </FlexContainer>
     </Container>
   );
 };
