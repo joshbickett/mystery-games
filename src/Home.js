@@ -133,10 +133,14 @@ export const Home = () => {
           </div>
         </SplitRight>
       </SplitContainer>
-      <FlexContainer style={{ paddingBottom: "200px" }}>
+      <FlexContainer style={{ paddingBottom: "100px" }}>
         <h4>Share your email below to get the Free Mystery Game!</h4>
         <input type="text" placeholder="Email" />
+        <CallToActionButton>GET THE GAME</CallToActionButton>
       </FlexContainer>
+      <div style={{ fontSize: "10px", padding: "10px" }}>
+        Copyright © mysterygames.io 2023
+      </div>
     </Container>
   );
 };
@@ -148,6 +152,24 @@ const Container = styled.div`
 
   color: black;
   overflow: hidden;
+`;
+
+const CallToActionButton = styled.div`
+  cursor: pointer;
+  margin: 15px;
+  font-size: 25px;
+  padding: 10px 40px;
+  background-color: #ececec;
+  color: black;
+  border-radius: 15px;
+  user-select: none;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+  &:active {
+    scale: 1.02;
+  }
 `;
 
 const UnderlineP = styled.p`
