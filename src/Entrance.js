@@ -62,6 +62,12 @@ export const Entrance = ({ setEntered }) => {
 
             handleFlip();
           }}
+          onMouseDown={() => {
+            setTimeout(() => {
+              setWasHovered(true);
+            }, 100);
+            handleFlip();
+          }}
         />
       </CSSTransition>
 
