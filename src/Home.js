@@ -5,7 +5,7 @@ import { CSSTransition } from "react-transition-group";
 import { getGames } from "./utils/rss/gamesManager";
 import OperaCharacterOneImg from "./images/character-1.jpeg";
 import OperaCharacterTwoImg from "./images/character-2.jpeg";
-import DoorImg from "./images/door.jpeg";
+import DoorImg from "./images/door-1.jpg";
 import styled from "@emotion/styled";
 
 const games = getGames();

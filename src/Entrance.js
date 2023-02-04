@@ -1,31 +1,13 @@
 import { CSSTransition } from "react-transition-group";
-import { getMansionImage } from "./utils/rss/gamesManager";
+
 import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
-
-const texts = ["Text 1", "Text 2", "Text 3"];
-
-const img = getMansionImage();
+import DoorOne from "./images/door-1.jpg";
 
 export const Entrance = ({ setEntered }) => {
-  const [text, setText] = useState("");
-  const [top, setTop] = useState("0px");
-  const [left, setLeft] = useState("0px");
-  const [visible, setVisible] = useState(false);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     const randomIndex = Math.floor(Math.random() * texts.length);
-  //     const newText = texts[randomIndex];
-  //     setText(newText);
-  //     setTop(`${Math.floor(Math.random() * (window.innerHeight - 100))}px`);
-  //     setLeft(`${Math.floor(Math.random() * (window.innerWidth - 100))}px`);
-  //     setVisible(!visible);
-  //   }, 2000);
-  //   return () => clearInterval(interval);
-  // }, [visible]);
-
   const [isFlipped, setIsFlipped] = useState(false);
+  // make an onhover state
+  const [wasHovered, setWasHovered] = useState(false);
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
@@ -34,17 +16,27 @@ export const Entrance = ({ setEntered }) => {
   useEffect(() => {
     if (isFlipped) {
       setTimeout(() => {
-        setEntered(true);
+        // setEntered(true);
       }, [1000]);
     }
   }, [isFlipped, setEntered]);
 
   return (
     <Container>
-      <h2 style={{ color: " #212427", padding: 0, margin: 0 }}>ENTER</h2>
-      <p style={{ color: " #212427", padding: "20px", margin: 0 }}>
-        Discover a world of games and mysteries.
-      </p>
+      {wasHovered && (
+        <PlayingCardFlipped
+          onClick={() => {
+            setTimeout(() => {
+              setEntered(true);
+            }, 100);
+          }}
+        >
+          <h2 style={{ padding: 0, margin: 0 }}>ENTER</h2>
+          <p style={{ padding: "20px", margin: 0 }}>
+            Discover a world of games and mysteries.
+          </p>
+        </PlayingCardFlipped>
+      )}
 
       <CSSTransition
         in={!isFlipped}
@@ -52,7 +44,18 @@ export const Entrance = ({ setEntered }) => {
         classNames="flip"
         unmountOnExit
       >
-        <PlayingCard src={img} alt="enter" onClick={handleFlip} />
+        <PlayingCard
+          src={DoorOne}
+          alt="enter"
+          onClick={handleFlip}
+          onMouseOver={() => {
+            setTimeout(() => {
+              setWasHovered(true);
+            }, 100);
+
+            handleFlip();
+          }}
+        />
       </CSSTransition>
 
       <div></div>
@@ -73,13 +76,28 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
-const PlayingCard = styled.img`
-  width: 200px;
-  height: 300px;
+const PlayingCardFlipped = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0b0000;
+  color: white;
   border-radius: 16px;
-  &:hover {
-    scale: 1.1;
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:active {
+    background-color: ##5a5a5a;
   }
+`;
+
+const PlayingCard = styled.img`
+  height: 500px;
+  border-radius: 16px;
 `;
 
 /*  <div>

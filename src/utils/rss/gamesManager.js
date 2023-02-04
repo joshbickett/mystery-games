@@ -3,6 +3,9 @@ import MansionTwo from "../../images/mansion-2.jpeg";
 import MansionThree from "../../images/mansion-3.jpeg";
 import MansionFour from "../../images/mansion-4.jpeg";
 import MansionFive from "../../images/mansion-5.jpeg";
+import DoorOne from "../../images/door-1.jpg";
+import DoorTwo from "../../images/door-2.jpg";
+import DoorThree from "../../images/door-3.jpg";
 
 // const gameArray = [
 //   "Night at the Opera",
@@ -19,6 +22,12 @@ export const getMansionImage = () => {
     MansionFour,
     MansionFive,
   ];
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+};
+
+export const getDoorImage = () => {
+  const array = [DoorOne, DoorTwo, DoorThree];
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 };
