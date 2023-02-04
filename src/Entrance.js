@@ -87,7 +87,7 @@ const PlayingCardFlipped = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   background-color: #0b0000;
   color: white;
   border-radius: 16px;
@@ -98,7 +98,7 @@ const PlayingCardFlipped = styled.div`
   justify-content: flex-end;
   align-items: center;
   &:active {
-    background-color: ##5a5a5a;
+    transform: translate(-50%, -50%) scale(1.05);
   }
 `;
 
