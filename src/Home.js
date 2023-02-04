@@ -36,6 +36,9 @@ export const Home = () => {
     <Container>
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
+        <p>
+          <i>A game powered by AI</i>
+        </p>
       </NavContainer>
       <Separator />
       <SplitContainer>
@@ -95,6 +98,24 @@ export const Home = () => {
           </div>
         </div>
       </FlexContainer>
+      <Separator />
+      <SplitContainer>
+        <SplitLeft style={{ backgroundColor: "#ffffff", color: "black" }}>
+          <h1>How it works</h1>
+          <p>All provided with the Mystery Game </p>
+        </SplitLeft>
+        <SplitRight style={{ backgroundColor: "#D3D3D3" }}>
+          <CSSTransition in={!isFlipped} timeout={300} classNames="flip">
+            <img
+              src={heroGame.img}
+              alt="enter"
+              style={{ width: "100px", borderRadius: "6px", flex: "1" }}
+            />
+          </CSSTransition>
+          <h3 style={{ fontSize: "25px" }}>{heroGame.name}</h3>
+          <p style={{ padding: 0, margin: 0 }}>{heroGame.subtext}</p>
+        </SplitRight>
+      </SplitContainer>
     </Container>
   );
 };
@@ -136,7 +157,7 @@ const Separator = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 2px;
-  background-color: #5a5a5a;
+  background-color: #f7cc0c;
 `;
 
 const FlexContainer = styled.div`
@@ -149,11 +170,13 @@ const FlexContainer = styled.div`
 
 const NavContainer = styled.div`
   display: flex;
+  flex-direction: row;
   width: 100%;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
   background-color: #ffffff;
-  color: white;
+  color: black;
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 10px;
