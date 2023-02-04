@@ -54,7 +54,6 @@ export const Entrance = ({ setEntered }) => {
         <PlayingCard
           src={DoorOne}
           alt="enter"
-          onClick={handleFlip}
           onMouseOver={() => {
             setTimeout(() => {
               setWasHovered(true);
