@@ -5,7 +5,7 @@ import { CSSTransition } from "react-transition-group";
 import { getGames } from "./utils/rss/gamesManager";
 import OperaCharacterOneImg from "./images/character-1.jpeg";
 import OperaCharacterTwoImg from "./images/character-2.jpeg";
-import OperaCharacterThreeImg from "./images/character-3.jpeg";
+import DoorImg from "./images/door.jpeg";
 import styled from "@emotion/styled";
 
 const games = getGames();
@@ -107,14 +107,30 @@ export const Home = () => {
             part
           </p>
         </SplitLeft>
-        <SplitRight style={{ backgroundColor: "#D3D3D3" }}>
-          <ul>
-            <p>8 players</p>
-            <p>Each characters has backstores</p>
-            <p>Each characters has a goal to win</p>
-            <p>One antagonist (villain)</p>
-            <p>A simple chatbot to answer your questions during the game</p>
-          </ul>
+        <SplitRight
+          style={{
+            backgroundColor: "#f9f9f9",
+            flexDirection: "row",
+            padding: "50px",
+          }}
+        >
+          <div>
+            <img
+              src={DoorImg}
+              alt="door"
+              style={{ width: "150px", borderRadius: "4px", flex: "1" }}
+            />
+          </div>
+
+          <div style={{ padding: "10px" }}>
+            <UnderlineP>8 players</UnderlineP>
+            <UnderlineP>Each characters has backstores</UnderlineP>
+            <UnderlineP>Each characters has a goal to win</UnderlineP>
+            <UnderlineP>One antagonist (villain)</UnderlineP>
+            <UnderlineP>
+              A simple chatbot to answer your questions during the game
+            </UnderlineP>
+          </div>
         </SplitRight>
       </SplitContainer>
     </Container>
@@ -128,6 +144,10 @@ const Container = styled.div`
 
   color: black;
   overflow: hidden;
+`;
+
+const UnderlineP = styled.p`
+  text-decoration: underline;
 `;
 
 const NavSubText = styled.p`
