@@ -3,6 +3,7 @@ import { CSSTransition } from "react-transition-group";
 import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import DoorOne from "./images/door-1.jpg";
+import PlayingCardOne from "./images/playing-card-1.jpg";
 
 export const Entrance = ({ setEntered }) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -30,9 +31,15 @@ export const Entrance = ({ setEntered }) => {
               setEntered(true);
             }, 100);
           }}
+          style={{
+            backgroundImage: `url(${PlayingCardOne})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
         >
-          <h2 style={{ padding: 0, margin: 0 }}>ENTER</h2>
-          <p style={{ padding: "20px", margin: 0 }}>
+          <h3 style={{ padding: 0, margin: 0 }}>ENTER</h3>
+          <p style={{ padding: "10px", margin: 0 }}>
             Discover a world of games and mysteries.
           </p>
         </PlayingCardFlipped>
@@ -88,7 +95,7 @@ const PlayingCardFlipped = styled.div`
   height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   &:active {
     background-color: ##5a5a5a;
