@@ -104,16 +104,16 @@ export const Home = () => {
           <h1>How it works</h1>
           <p>
             It is kind of like a Murder Mystery Game, but with only the mystery
-            part.
+            part
           </p>
         </SplitLeft>
         <SplitRight style={{ backgroundColor: "#D3D3D3" }}>
           <ul>
-            <li>8 players</li>
-            <li>Everyone gets a character</li>
-            <li>All characters have backstories</li>
-            <li>All characters have a way to win</li>
-            <li>One antagonist (villain)</li>
+            <p>8 players</p>
+            <p>Each characters has backstores</p>
+            <p>Each characters has a goal to win</p>
+            <p>One antagonist (villain)</p>
+            <p>A simple chatbot to answer your questions during the game</p>
           </ul>
         </SplitRight>
       </SplitContainer>
