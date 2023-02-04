@@ -36,9 +36,9 @@ export const Home = () => {
     <Container>
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
-        <p>
-          <i>A game powered by AI</i>
-        </p>
+        <NavSubText>
+          <i>Developed with AI</i>
+        </NavSubText>
       </NavContainer>
       <Separator />
       <SplitContainer>
@@ -102,18 +102,19 @@ export const Home = () => {
       <SplitContainer>
         <SplitLeft style={{ backgroundColor: "#ffffff", color: "black" }}>
           <h1>How it works</h1>
-          <p>All provided with the Mystery Game </p>
+          <p>
+            It is kind of like a Murder Mystery Game, but with only the mystery
+            part.
+          </p>
         </SplitLeft>
         <SplitRight style={{ backgroundColor: "#D3D3D3" }}>
-          <CSSTransition in={!isFlipped} timeout={300} classNames="flip">
-            <img
-              src={heroGame.img}
-              alt="enter"
-              style={{ width: "100px", borderRadius: "6px", flex: "1" }}
-            />
-          </CSSTransition>
-          <h3 style={{ fontSize: "25px" }}>{heroGame.name}</h3>
-          <p style={{ padding: 0, margin: 0 }}>{heroGame.subtext}</p>
+          <ul>
+            <li>8 players</li>
+            <li>Everyone gets a character</li>
+            <li>All characters have backstories</li>
+            <li>All characters have a way to win</li>
+            <li>One antagonist (villain)</li>
+          </ul>
         </SplitRight>
       </SplitContainer>
     </Container>
@@ -127,6 +128,10 @@ const Container = styled.div`
 
   color: black;
   overflow: hidden;
+`;
+
+const NavSubText = styled.p`
+  padding: 10px;
 `;
 
 /*style={{ margin: "10px" }} */
