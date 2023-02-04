@@ -10,6 +10,19 @@ export const Entrance = ({ setEntered }) => {
   // make an onhover state
   const [wasHovered, setWasHovered] = useState(false);
 
+  useEffect(() => {
+    // if mobile fire code below
+    if (window.innerWidth < 768) {
+      setTimeout(() => {
+        setTimeout(() => {
+          setWasHovered(true);
+        }, 100);
+
+        handleFlip();
+      }, 300);
+    }
+  }, []);
+
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
   };
