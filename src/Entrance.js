@@ -21,12 +21,14 @@ export const Entrance = ({ setEntered }) => {
 
   return (
     <Container>
-      <PlayingCardFlipped>
-        <h3 style={{ padding: 0, margin: 0 }}>CLICK TO ENTER</h3>
-        <p style={{ padding: "10px", margin: 0 }}>
+      <PlayingCardOverlay>
+        <p style={{ margin: 0, padding: 0 }}>
           Discover a world of games and mysteries.
         </p>
-      </PlayingCardFlipped>
+        <h4 style={{ padding: 0, margin: 10, marginBottom: 10 }}>
+          CLICK TO ENTER
+        </h4>
+      </PlayingCardOverlay>
 
       <CSSTransition
         in={!isFlipped}
@@ -56,7 +58,7 @@ const Container = styled.div`
 `;
 
 /* allow click events to pass through */
-const PlayingCardFlipped = styled.div`
+const PlayingCardOverlay = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
