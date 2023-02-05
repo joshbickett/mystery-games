@@ -35,11 +35,12 @@ export const getDoorImage = () => {
 export const getGames = () => {
   console.log("get games");
   return [
-    { name: "Night at the Opera", img: MansionOne, subtext: "Available now!" },
+    { name: "Night at the Opera", img: MansionOne, subtext: "Coming soon" },
     {
-      name: "Additional Games",
+      name: "Learn more below",
       img: MansionTwo,
-      subtext: "Coming soon",
+      subtext:
+        "It is kind of like a Murder Mystery Game, but with only the mystery part",
     },
   ];
 };

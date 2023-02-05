@@ -37,7 +37,7 @@ export const Home = () => {
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
         <NavSubText>
-          <i>Developed in partnership between Humans and AI (HI & AI)</i>
+          Developed in partnership between Humans and AI (HI & AI)
         </NavSubText>
       </NavContainer>
       <Separator />
@@ -59,7 +59,9 @@ export const Home = () => {
             />
           </CSSTransition>
           <h3 style={{ fontSize: "25px" }}>{heroGame.name}</h3>
-          <p style={{ padding: 0, margin: 0 }}>{heroGame.subtext}</p>
+          <p style={{ padding: 0, margin: 0, textAlign: "center" }}>
+            {heroGame.subtext}
+          </p>
         </SplitRight>
       </SplitContainer>
       <Separator />
@@ -124,19 +126,23 @@ export const Home = () => {
 
           <div style={{ padding: "10px" }}>
             <UnderlineP>8 players</UnderlineP>
-            <UnderlineP>Each characters has backstores</UnderlineP>
-            <UnderlineP>Each characters has a goal to win</UnderlineP>
-            <UnderlineP>One antagonist (villain)</UnderlineP>
-            <UnderlineP>
-              A simple chatbot to answer your questions during the game
-            </UnderlineP>
+            <UnderlineP>Each character has a backstores</UnderlineP>
+            <UnderlineP>Everyone tries to win</UnderlineP>
+            <UnderlineP>One mystery with an antagonist (villain)</UnderlineP>
+            <UnderlineP>Choose one game master</UnderlineP>
           </div>
         </SplitRight>
       </SplitContainer>
-      <FlexContainer style={{ paddingBottom: "100px" }}>
-        <h4>Share your email below to get the Free Mystery Game!</h4>
-        <input type="text" placeholder="Email" />
-        <CallToActionButton>GET THE GAME</CallToActionButton>
+      <FlexContainer
+        style={{
+          marginBottom: "100px",
+          backgroundColor: "black",
+          color: "white",
+        }}
+      >
+        <h2>COMING SOON</h2>
+        {/* <input type="text" placeholder="Email" /> */}
+        {/* <CallToActionButton>GET THE GAME</CallToActionButton> */}
       </FlexContainer>
       <div style={{ fontSize: "10px", padding: "10px" }}>
         Copyright © mysterygames.io 2023
@@ -178,6 +184,7 @@ const UnderlineP = styled.p`
 
 const NavSubText = styled.p`
   padding: 10px;
+  text-align: center;
 `;
 
 /*style={{ margin: "10px" }} */
