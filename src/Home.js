@@ -5,6 +5,7 @@ import { CSSTransition } from "react-transition-group";
 import { getGames } from "./utils/rss/gamesManager";
 import OperaCharacterOneImg from "./images/character-1.jpeg";
 import OperaCharacterTwoImg from "./images/character-2.jpeg";
+import PiratesImg from "./images/pirates.jpeg";
 import DoorImg from "./images/door-1.jpg";
 import styled from "@emotion/styled";
 
@@ -135,18 +136,27 @@ export const Home = () => {
       </SplitContainer>
       <FlexContainer
         style={{
-          marginBottom: "100px",
           backgroundColor: "black",
           color: "white",
+          paddingBottom: 100,
         }}
       >
         <h2>COMING SOON</h2>
+        <img src={PiratesImg} alt="mansion" style={{ width: 200 }} />
         {/* <input type="text" placeholder="Email" /> */}
         {/* <CallToActionButton>GET THE GAME</CallToActionButton> */}
       </FlexContainer>
-      <div style={{ fontSize: "10px", padding: "10px" }}>
-        Copyright © mysterygames.io 2023
-      </div>
+      <FlexContainer
+        style={{
+          backgroundColor: "black",
+          color: "white",
+          flexDirection: "row",
+        }}
+      >
+        <div style={{ fontSize: "10px", padding: "10px" }}>
+          Copyright © mysterygames.io 2023
+        </div>
+      </FlexContainer>
     </Container>
   );
 };

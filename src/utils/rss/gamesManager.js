@@ -37,10 +37,9 @@ export const getGames = () => {
   return [
     { name: "Night at the Opera", img: MansionOne, subtext: "Coming soon" },
     {
-      name: "Learn more below",
+      name: "You get a role",
       img: MansionTwo,
-      subtext:
-        "It is kind of like a Murder Mystery Game, but with only the mystery part",
+      subtext: "Try to solve the mystery to win the game.",
     },
   ];
 };
