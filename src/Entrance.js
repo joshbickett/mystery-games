@@ -7,21 +7,6 @@ import PlayingCardOne from "./images/playing-card-1.jpg";
 
 export const Entrance = ({ setEntered }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  // make an onhover state
-  const [wasHovered, setWasHovered] = useState(false);
-
-  useEffect(() => {
-    // if mobile fire code below
-    if (window.innerWidth < 768) {
-      setTimeout(() => {
-        setTimeout(() => {
-          setWasHovered(true);
-        }, 100);
-
-        handleFlip();
-      }, 300);
-    }
-  }, []);
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
@@ -30,33 +15,19 @@ export const Entrance = ({ setEntered }) => {
   useEffect(() => {
     if (isFlipped) {
       setTimeout(() => {
-        // setEntered(true);
+        setEntered(true);
       }, [1000]);
     }
   }, [isFlipped, setEntered]);
 
   return (
     <Container>
-      {wasHovered && (
-        <PlayingCardFlipped
-          onClick={() => {
-            setTimeout(() => {
-              setEntered(true);
-            }, 100);
-          }}
-          style={{
-            backgroundImage: `url(${PlayingCardOne})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        >
-          <h3 style={{ padding: 0, margin: 0 }}>CLICK TO ENTER</h3>
-          <p style={{ padding: "10px", margin: 0 }}>
-            Discover a world of games and mysteries.
-          </p>
-        </PlayingCardFlipped>
-      )}
+      <PlayingCardFlipped>
+        <h3 style={{ padding: 0, margin: 0 }}>CLICK TO ENTER</h3>
+        <p style={{ padding: "10px", margin: 0 }}>
+          Discover a world of games and mysteries.
+        </p>
+      </PlayingCardFlipped>
 
       <CSSTransition
         in={!isFlipped}
@@ -64,23 +35,7 @@ export const Entrance = ({ setEntered }) => {
         classNames="flip"
         unmountOnExit
       >
-        <PlayingCard
-          src={DoorOne}
-          alt="enter"
-          onMouseOver={() => {
-            setTimeout(() => {
-              setWasHovered(true);
-            }, 100);
-
-            handleFlip();
-          }}
-          onMouseDown={() => {
-            setTimeout(() => {
-              setWasHovered(true);
-            }, 100);
-            handleFlip();
-          }}
-        />
+        <PlayingCard src={PlayingCardOne} alt="enter" onClick={handleFlip} />
       </CSSTransition>
 
       <div></div>
@@ -101,12 +56,12 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
+/* allow click events to pass through */
 const PlayingCardFlipped = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  background-color: #0b0000;
   color: white;
   border-radius: 16px;
   width: 335px;
@@ -115,6 +70,7 @@ const PlayingCardFlipped = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  pointer-events: none;
   &:active {
     transform: translate(-50%, -50%) scale(1.05);
   }
