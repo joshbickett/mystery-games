@@ -242,12 +242,10 @@ const NavContainer = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
   background-color: #ffffff;
   color: black;
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 10px;
   }
 `;
 
