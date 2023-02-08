@@ -35,7 +35,11 @@ export const getDoorImage = () => {
 export const getGames = () => {
   console.log("get games");
   return [
-    { name: "Night at the Opera", img: MansionOne, subtext: "Coming soon" },
+    {
+      name: "Stealing Seconds in the Old West",
+      img: MansionOne,
+      subtext: "Coming soon",
+    },
     {
       name: "You get a role",
       img: MansionTwo,
