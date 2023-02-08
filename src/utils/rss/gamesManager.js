@@ -8,6 +8,7 @@ import DoorTwo from "../../images/door-2.jpg";
 import DoorThree from "../../images/door-3.jpg";
 import MansionCardOne from "../../images/mansion-card-1.jpeg";
 import WesternCharacterOne from "../../images/western-character-1.jpeg";
+import WesternCharacterTwo from "../../images/western-character-2.jpeg";
 
 // const gameArray = [
 //   "Night at the Opera",
@@ -46,6 +47,21 @@ export const getGames = () => {
       name: "You get a role",
       img: WesternCharacterOne,
       subtext: "Try to solve the mystery to win the game.",
+    },
+  ];
+};
+
+export const getCharacters = () => {
+  return [
+    {
+      name: "Wyatt Clockwise",
+      description: "A mysterious cowboy",
+      img: WesternCharacterOne,
+    },
+    {
+      name: "Doc Holiday the Historian",
+      description: "He knows a lot about the old west",
+      img: WesternCharacterTwo,
     },
   ];
 };

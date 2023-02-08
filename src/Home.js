@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import KeyImg from "./images/key-5.jpeg";
 import BrandLogoImage from "./images/brand-logo.png";
 import { CSSTransition } from "react-transition-group";
-import { getGames } from "./utils/rss/gamesManager";
+import { getGames, getCharacters } from "./utils/rss/gamesManager";
 import OperaCharacterOneImg from "./images/character-1.jpeg";
 import OperaCharacterTwoImg from "./images/character-2.jpeg";
 import PiratesImg from "./images/pirates.jpeg";
@@ -10,6 +10,7 @@ import DoorImg from "./images/door-1.jpg";
 import styled from "@emotion/styled";
 
 const games = getGames();
+const characters = getCharacters();
 let gameIndex = 0;
 export const Home = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -82,24 +83,24 @@ export const Home = () => {
       >
         <div>
           <img
-            src={OperaCharacterOneImg}
+            src={characters[0].img}
             alt="opera"
             style={{ width: "200px", borderRadius: "6px" }}
           />
           <div style={{ padding: "10px" }}>
-            <h2>Jeromy Tim</h2>
-            <p>He's the main character</p>
+            <h2>{characters[0].name}</h2>
+            <p>{characters[0].description}</p>
           </div>
         </div>
         <div style={{ margin: "10px" }}>
           <img
-            src={OperaCharacterTwoImg}
+            src={characters[1].img}
             alt="opera"
             style={{ width: "200px", borderRadius: "6px" }}
           />
           <div style={{ padding: "10px" }}>
-            <h2>Pat patrick</h2>
-            <p>He's another character</p>
+            <h2>{characters[1].name}</h2>
+            <p>{characters[1].description}</p>
           </div>
         </div>
       </FlexContainer>
