@@ -51,15 +51,17 @@ export const Home = () => {
             Enjoy a night of getting into character and solving a mystery.
           </p>
         </SplitLeft>
-        <SplitRight style={{ backgroundColor: "#ffffff" }}>
+        <SplitRight style={{ backgroundColor: "#ffffff", padding: 20 }}>
           <CSSTransition in={!isFlipped} timeout={300} classNames="flip">
             <img
               src={heroGame.img}
               alt="enter"
-              style={{ width: "100px", borderRadius: "6px", flex: "1" }}
+              style={{ width: "150px", borderRadius: "6px", flex: "1" }}
             />
           </CSSTransition>
-          <h3 style={{ fontSize: "25px" }}>{heroGame.name}</h3>
+          <h3 style={{ fontSize: "25px", padding: 0, margin: 10 }}>
+            {heroGame.name}
+          </h3>
           <p style={{ padding: 0, margin: 0, textAlign: "center" }}>
             {heroGame.subtext}
           </p>
