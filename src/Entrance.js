@@ -2,7 +2,7 @@ import { CSSTransition } from "react-transition-group";
 
 import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
-import PlayerImage from "./images/playing-card-1.jpg";
+import MansionCardImage from "./images/mansion-card-1-outpainted.jpeg";
 
 export const Entrance = ({ setEntered }) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -36,7 +36,7 @@ export const Entrance = ({ setEntered }) => {
         classNames="flip"
         unmountOnExit
       >
-        <PlayingCard src={PlayerImage} alt="enter" onClick={handleFlip} />
+        <PlayingCard src={MansionCardImage} alt="enter" onClick={handleFlip} />
       </CSSTransition>
 
       <div></div>
