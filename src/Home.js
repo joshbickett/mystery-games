@@ -5,7 +5,7 @@ import { CSSTransition } from "react-transition-group";
 import { getGames, getCharacters } from "./utils/rss/gamesManager";
 import OperaCharacterOneImg from "./images/character-1.jpeg";
 import OperaCharacterTwoImg from "./images/character-2.jpeg";
-import PiratesImg from "./images/pirates.jpeg";
+import CityImg from "./images/city.jpeg";
 import DoorImg from "./images/door-to-no-where.jpeg";
 import styled from "@emotion/styled";
 
@@ -118,7 +118,7 @@ export const Home = () => {
             <img
               src={DoorImg}
               alt="door"
-              style={{ width: "300px", borderRadius: "4px", flex: "1" }}
+              style={{ width: "300px", borderRadius: "8px", flex: "1" }}
             />
           </div>
 
@@ -131,18 +131,37 @@ export const Home = () => {
           </div>
         </SplitRight>
       </SplitContainer>
-      <FlexContainer
-        style={{
-          backgroundColor: "black",
-          color: "white",
-          paddingBottom: 100,
-        }}
-      >
-        <h2>COMING SOON</h2>
-        <img src={PiratesImg} alt="mansion" style={{ width: 200 }} />
-        {/* <input type="text" placeholder="Email" /> */}
-        {/* <CallToActionButton>GET THE GAME</CallToActionButton> */}
-      </FlexContainer>
+      <SplitContainer>
+        <SplitRight
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            paddingBottom: 100,
+          }}
+        >
+          <h3>Sign up to learn more</h3>
+          <p>Learn more </p>
+          <input type="text" placeholder="Email" />
+          {/* <CallToActionButton>GET THE GAME</CallToActionButton> */}
+        </SplitRight>
+        <SplitLeft
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            paddingBottom: 100,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <h2>COMING SOON</h2>
+          <img
+            src={CityImg}
+            alt="mansion"
+            style={{ width: 300, borderRadius: "8px" }}
+          />
+        </SplitLeft>
+      </SplitContainer>
       <FlexContainer
         style={{
           backgroundColor: "black",
@@ -177,7 +196,7 @@ const InnerCharacterContainer = styled.div`
 
 const CharacterImage = styled.img`
   width: 200px;
-  border-radius: 6px;
+  border-radius: 8px;
 `;
 
 // opacity just a little
