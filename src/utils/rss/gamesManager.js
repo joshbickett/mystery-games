@@ -7,8 +7,8 @@ import DoorOne from "../../images/door-1.jpg";
 import DoorTwo from "../../images/door-2.jpg";
 import DoorThree from "../../images/door-3.jpg";
 import MansionCardOne from "../../images/mansion-card-1.jpeg";
-import WesternCharacterOne from "../../images/western-character-1.jpeg";
-import WesternCharacterTwo from "../../images/western-character-2.jpeg";
+import WesternCharacterOne from "../../images/character-1.jpeg";
+import WesternCharacterTwo from "../../images/character-2.jpeg";
 
 // const gameArray = [
 //   "Night at the Opera",
@@ -84,11 +84,6 @@ export const getCharacters = () => {
       img: WesternCharacterTwo,
     },
     {
-      name: "Jimmy Cloud",
-      description: "Telegram Delivery Boy",
-      img: WesternCharacterOne,
-    },
-    {
       name: "Rose Sagebrush",
       description: "Reporter at Heart of the West Gazette",
       img: WesternCharacterOne,
@@ -96,12 +91,6 @@ export const getCharacters = () => {
     {
       name: "Sheriff Jerry Hardlaw",
       description: "Local Mondred County Sheriff",
-      img: WesternCharacterOne,
-    },
-
-    {
-      name: "Terry Sharp",
-      description: "Mysterious Traveler",
       img: WesternCharacterOne,
     },
   ];
