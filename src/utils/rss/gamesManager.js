@@ -10,6 +10,7 @@ import WesternCharacterFive from "../../images/character-5.jpeg";
 import WesternCharacterSix from "../../images/character-6.jpeg";
 import WesternCharacterSeven from "../../images/character-7.jpeg";
 import WesternCharacterEight from "../../images/character-8.jpeg";
+import City from "../../images/city.jpeg";
 
 // const gameArray = [
 //   "Night at the Opera",
@@ -34,7 +35,7 @@ export const getGames = () => {
     },
     {
       name: "You get a role",
-      img: WesternCharacterOne,
+      img: City,
       subtext: "Try to solve the mystery to win the game.",
     },
   ];

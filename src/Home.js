@@ -187,6 +187,10 @@ const CharacterContainer = styled.div`
   margin: 10px;
   width: 250px;
   min-height: 400px;
+  @media (max-width: 768px) {
+    width: 200px;
+    min-height: 350px;
+  }
 `;
 
 const InnerCharacterContainer = styled.div`
@@ -199,6 +203,9 @@ const InnerCharacterContainer = styled.div`
 const CharacterImage = styled.img`
   width: 200px;
   border-radius: 8px;
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 `;
 
 // opacity just a little
