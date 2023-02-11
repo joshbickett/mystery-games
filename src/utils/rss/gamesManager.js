@@ -1,14 +1,15 @@
-import MansionOne from "../../images/mansion-1.jpeg";
-import MansionTwo from "../../images/mansion-2.jpeg";
-import MansionThree from "../../images/mansion-3.jpeg";
-import MansionFour from "../../images/mansion-4.jpeg";
-import MansionFive from "../../images/mansion-5.jpeg";
 import DoorOne from "../../images/door-1.jpg";
 import DoorTwo from "../../images/door-2.jpg";
 import DoorThree from "../../images/door-3.jpg";
 import MansionCardOne from "../../images/mansion-card-1.jpeg";
 import WesternCharacterOne from "../../images/character-1.jpeg";
 import WesternCharacterTwo from "../../images/character-2.jpeg";
+import WesternCharacterThree from "../../images/character-3.jpeg";
+import WesternCharacterFour from "../../images/character-4.jpeg";
+import WesternCharacterFive from "../../images/character-5.jpeg";
+import WesternCharacterSix from "../../images/character-6.jpeg";
+import WesternCharacterSeven from "../../images/character-7.jpeg";
+import WesternCharacterEight from "../../images/character-8.jpeg";
 
 // const gameArray = [
 //   "Night at the Opera",
@@ -16,18 +17,6 @@ import WesternCharacterTwo from "../../images/character-2.jpeg";
 //   "Pirates game",
 //   "1920s funnies",
 // ];
-
-export const getMansionImage = () => {
-  const array = [
-    MansionOne,
-    MansionTwo,
-    MansionThree,
-    MansionFour,
-    MansionFive,
-  ];
-  const randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex];
-};
 
 export const getDoorImage = () => {
   const array = [DoorOne, DoorTwo, DoorThree];
@@ -66,32 +55,32 @@ export const getCharacters = () => {
     {
       name: "Al Pacino",
       description: "Alpaca Farmer",
-      img: WesternCharacterOne,
+      img: WesternCharacterThree,
     },
     {
       name: "Bob 'bull' Rider",
       description: "Cattle Rancher at Rusty Spur Ranch",
-      img: WesternCharacterTwo,
+      img: WesternCharacterFour,
     },
     {
       name: "Silver Marshal",
       description: "New Guy at Rusty Spur Ranch",
-      img: WesternCharacterOne,
+      img: WesternCharacterFive,
     },
     {
       name: "Ruth Winchester",
       description: "Owner of Winchester Mercantile ",
-      img: WesternCharacterTwo,
+      img: WesternCharacterSix,
     },
     {
       name: "Rose Sagebrush",
       description: "Reporter at Heart of the West Gazette",
-      img: WesternCharacterOne,
+      img: WesternCharacterSeven,
     },
     {
       name: "Sheriff Jerry Hardlaw",
       description: "Local Mondred County Sheriff",
-      img: WesternCharacterOne,
+      img: WesternCharacterEight,
     },
   ];
 };

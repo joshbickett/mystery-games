@@ -165,8 +165,8 @@ const CharacterContainer = styled.div`
   justify-content: flex-start;
   margin: 10px;
   border: 1px solid black;
-  width: 200px;
-  min-height: 325px;
+  width: 250px;
+  min-height: 400px;
 `;
 
 const InnerCharacterContainer = styled.div`
@@ -177,7 +177,7 @@ const InnerCharacterContainer = styled.div`
 `;
 
 const CharacterImage = styled.img`
-  width: 150px;
+  width: 200px;
   border-radius: 6px;
 `;
 
