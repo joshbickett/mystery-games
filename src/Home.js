@@ -77,31 +77,31 @@ export const Home = () => {
       <FlexContainer
         style={{
           flexDirection: "row",
-          justifyContent: "left",
+          alignItems: "flex-start",
           padding: 10,
         }}
       >
         <CharacterContainer>
-          <img
-            src={characters[0].img}
-            alt="opera"
-            style={{ width: "200px", borderRadius: "6px" }}
-          />
-          <div style={{ padding: "10px" }}>
-            <h4>{characters[0].name}</h4>
-            <p>{characters[0].description}</p>
-          </div>
+          <CharacterImage src={characters[0].img} alt="char1" />
+          <InnerCharacterContainer>
+            <h4 style={{ textAlign: "center", margin: 5 }}>
+              {characters[0].name}
+            </h4>
+            <p style={{ textAlign: "center", margin: 0 }}>
+              {characters[0].description}
+            </p>
+          </InnerCharacterContainer>
         </CharacterContainer>
         <CharacterContainer>
-          <img
-            src={characters[1].img}
-            alt="opera"
-            style={{ width: "200px", borderRadius: "6px" }}
-          />
-          <div style={{ padding: "10px" }}>
-            <h2>{characters[1].name}</h2>
-            <p>{characters[1].description}</p>
-          </div>
+          <CharacterImage src={characters[1].img} alt="char2" />
+          <InnerCharacterContainer>
+            <h4 style={{ textAlign: "center", margin: 5 }}>
+              {characters[1].name}
+            </h4>
+            <p style={{ textAlign: "center", margin: 0 }}>
+              {characters[1].description}
+            </p>
+          </InnerCharacterContainer>
         </CharacterContainer>
       </FlexContainer>
       <Separator />
@@ -168,9 +168,22 @@ const CharacterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   margin: 10px;
   border: 1px solid black;
   width: 250px;
+`;
+
+const InnerCharacterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+`;
+
+const CharacterImage = styled.img`
+  width: 200px;
+  border-radius: 6px;
 `;
 
 // opacity just a little
