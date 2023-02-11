@@ -6,7 +6,7 @@ import { getGames, getCharacters } from "./utils/rss/gamesManager";
 import OperaCharacterOneImg from "./images/character-1.jpeg";
 import OperaCharacterTwoImg from "./images/character-2.jpeg";
 import PiratesImg from "./images/pirates.jpeg";
-import DoorImg from "./images/door-1.jpg";
+import DoorImg from "./images/door-to-no-where.jpeg";
 import styled from "@emotion/styled";
 
 const games = getGames();
@@ -99,7 +99,7 @@ export const Home = () => {
         })}
       </FlexContainer>
       <Separator />
-      <SplitContainer>
+      <SplitContainer style={{ gridTemplateColumns: "1fr 2fr" }}>
         <SplitLeft style={{ backgroundColor: "#ffffff", color: "black" }}>
           <h1>How it works</h1>
           <p>
@@ -118,7 +118,7 @@ export const Home = () => {
             <img
               src={DoorImg}
               alt="door"
-              style={{ width: "150px", borderRadius: "4px", flex: "1" }}
+              style={{ width: "300px", borderRadius: "4px", flex: "1" }}
             />
           </div>
 
@@ -164,7 +164,6 @@ const CharacterContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   margin: 10px;
-  border: 1px solid black;
   width: 250px;
   min-height: 400px;
 `;
@@ -210,6 +209,7 @@ const CallToActionButton = styled.div`
 
 const UnderlineP = styled.p`
   text-decoration: underline;
+  font-size: 20px;
 `;
 
 const NavSubText = styled.p`
