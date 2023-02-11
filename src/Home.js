@@ -172,6 +172,7 @@ const CharacterContainer = styled.div`
   margin: 10px;
   border: 1px solid black;
   width: 250px;
+  min-height: 400px;
 `;
 
 const InnerCharacterContainer = styled.div`

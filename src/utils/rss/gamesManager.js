@@ -55,13 +55,54 @@ export const getCharacters = () => {
   return [
     {
       name: "Wyatt Clockwise",
-      description: "A mysterious cowboy",
+      description: "A mysterious traveler",
       img: WesternCharacterOne,
     },
     {
-      name: "Doc Holiday the Historian",
-      description: "He knows a lot about the old west",
+      name: "Professor Fate",
+      description: "The fortune teller",
       img: WesternCharacterTwo,
+    },
+    {
+      name: "Al Pacino",
+      description: "Alpaca Farmer",
+      img: WesternCharacterOne,
+    },
+    {
+      name: "Bob 'bull' Rider",
+      description: "Cattle Rancher at Rusty Spur Ranch",
+      img: WesternCharacterTwo,
+    },
+    {
+      name: "Silver Marshal",
+      description: "New Guy at Rusty Spur Ranch",
+      img: WesternCharacterOne,
+    },
+    {
+      name: "Ruth Winchester",
+      description: "Owner of Winchester Mercantile ",
+      img: WesternCharacterTwo,
+    },
+    {
+      name: "Jimmy Cloud",
+      description: "Telegram Delivery Boy",
+      img: WesternCharacterOne,
+    },
+    {
+      name: "Rose Sagebrush",
+      description: "Reporter at Heart of the West Gazette",
+      img: WesternCharacterOne,
+    },
+    {
+      name: "Sheriff Jerry Hardlaw",
+      description: "Local Mondred County Sheriff",
+      img: WesternCharacterOne,
+    },
+
+    {
+      name: "Terry Sharp",
+      description: "Mysterious Traveler",
+      img: WesternCharacterOne,
     },
   ];
 };
