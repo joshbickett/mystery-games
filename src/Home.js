@@ -78,31 +78,25 @@ export const Home = () => {
         style={{
           flexDirection: "row",
           alignItems: "flex-start",
+          flexWrap: "wrap",
           padding: 10,
         }}
       >
-        <CharacterContainer>
-          <CharacterImage src={characters[0].img} alt="char1" />
-          <InnerCharacterContainer>
-            <h4 style={{ textAlign: "center", margin: 5 }}>
-              {characters[0].name}
-            </h4>
-            <p style={{ textAlign: "center", margin: 0 }}>
-              {characters[0].description}
-            </p>
-          </InnerCharacterContainer>
-        </CharacterContainer>
-        <CharacterContainer>
-          <CharacterImage src={characters[1].img} alt="char2" />
-          <InnerCharacterContainer>
-            <h4 style={{ textAlign: "center", margin: 5 }}>
-              {characters[1].name}
-            </h4>
-            <p style={{ textAlign: "center", margin: 0 }}>
-              {characters[1].description}
-            </p>
-          </InnerCharacterContainer>
-        </CharacterContainer>
+        {characters.map((character, index) => {
+          return (
+            <CharacterContainer>
+              <CharacterImage src={character.img} alt={`char${index}`} />
+              <InnerCharacterContainer>
+                <h4 style={{ textAlign: "center", margin: 5 }}>
+                  {character.name}
+                </h4>
+                <p style={{ textAlign: "center", margin: 0 }}>
+                  {character.description}
+                </p>
+              </InnerCharacterContainer>
+            </CharacterContainer>
+          );
+        })}
       </FlexContainer>
       <Separator />
       <SplitContainer>
@@ -171,8 +165,8 @@ const CharacterContainer = styled.div`
   justify-content: flex-start;
   margin: 10px;
   border: 1px solid black;
-  width: 250px;
-  min-height: 400px;
+  width: 200px;
+  min-height: 325px;
 `;
 
 const InnerCharacterContainer = styled.div`
@@ -183,7 +177,7 @@ const InnerCharacterContainer = styled.div`
 `;
 
 const CharacterImage = styled.img`
-  width: 200px;
+  width: 150px;
   border-radius: 6px;
 `;
 
