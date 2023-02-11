@@ -118,7 +118,7 @@ export const Home = () => {
             <img
               src={DoorImg}
               alt="door"
-              style={{ width: "300px", borderRadius: "8px", flex: "1" }}
+              style={{ width: "250px", borderRadius: "8px", flex: "1" }}
             />
           </div>
 
@@ -229,8 +229,9 @@ const CallToActionButton = styled.div`
 `;
 
 const UnderlineP = styled.p`
-  text-decoration: underline;
-  font-size: 20px;
+  font-size: 16px;
+  text-align: left;
+  margin: 30px 0;
 `;
 
 const NavSubText = styled.p`
