@@ -131,6 +131,7 @@ export const Home = () => {
           </div>
         </SplitRight>
       </SplitContainer>
+      <Separator />
       <SplitContainer>
         <SplitRight
           style={{
@@ -144,6 +145,7 @@ export const Home = () => {
           <input type="text" placeholder="Email" />
           {/* <CallToActionButton>GET THE GAME</CallToActionButton> */}
         </SplitRight>
+
         <SplitLeft
           style={{
             backgroundColor: "black",
