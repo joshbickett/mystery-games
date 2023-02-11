@@ -81,18 +81,18 @@ export const Home = () => {
           padding: 10,
         }}
       >
-        <div>
+        <CharacterContainer>
           <img
             src={characters[0].img}
             alt="opera"
             style={{ width: "200px", borderRadius: "6px" }}
           />
           <div style={{ padding: "10px" }}>
-            <h2>{characters[0].name}</h2>
+            <h4>{characters[0].name}</h4>
             <p>{characters[0].description}</p>
           </div>
-        </div>
-        <div style={{ margin: "10px" }}>
+        </CharacterContainer>
+        <CharacterContainer>
           <img
             src={characters[1].img}
             alt="opera"
@@ -102,7 +102,7 @@ export const Home = () => {
             <h2>{characters[1].name}</h2>
             <p>{characters[1].description}</p>
           </div>
-        </div>
+        </CharacterContainer>
       </FlexContainer>
       <Separator />
       <SplitContainer>
@@ -164,6 +164,15 @@ export const Home = () => {
   );
 };
 
+const CharacterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid black;
+  width: 250px;
+`;
+
 // opacity just a little
 const Container = styled.div`
   min-height: 100vh;
@@ -198,14 +207,6 @@ const UnderlineP = styled.p`
 const NavSubText = styled.p`
   padding: 10px;
   text-align: center;
-`;
-
-/*style={{ margin: "10px" }} */
-const CharacterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
 `;
 
 const NavItem = styled.h2`
