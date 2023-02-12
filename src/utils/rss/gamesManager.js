@@ -10,7 +10,7 @@ import WesternCharacterFive from "../../images/character-5.jpeg";
 import WesternCharacterSix from "../../images/character-6.jpeg";
 import WesternCharacterSeven from "../../images/character-7.jpeg";
 import WesternCharacterEight from "../../images/character-8.jpeg";
-import City from "../../images/city.jpeg";
+import CowboysImg from "../../images/cowboys.jpeg";
 
 // const gameArray = [
 //   "Night at the Opera",
@@ -25,17 +25,17 @@ export const getDoorImage = () => {
   return array[randomIndex];
 };
 
-export const getGames = () => {
+export const getHeros = () => {
   console.log("get games");
   return [
     {
       name: "Stealing Seconds in the Old West",
       img: MansionCardOne,
-      subtext: "Coming soon",
+      subtext: "Try now!",
     },
     {
       name: "You get a role",
-      img: City,
+      img: CowboysImg,
       subtext: "Try to solve the mystery to win the game.",
     },
   ];

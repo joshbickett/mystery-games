@@ -1,31 +1,29 @@
 import { useCallback, useEffect, useState } from "react";
-import KeyImg from "./images/key-5.jpeg";
+
 import BrandLogoImage from "./images/brand-logo.png";
 import { CSSTransition } from "react-transition-group";
-import { getGames, getCharacters } from "./utils/rss/gamesManager";
-import OperaCharacterOneImg from "./images/character-1.jpeg";
-import OperaCharacterTwoImg from "./images/character-2.jpeg";
+import { getHeros, getCharacters } from "./utils/rss/gamesManager";
 import CityImg from "./images/city.jpeg";
 import DoorImg from "./images/door-to-no-where.jpeg";
 import styled from "@emotion/styled";
 
-const games = getGames();
+const heros = getHeros();
 const characters = getCharacters();
-let gameIndex = 0;
+let heroIndex = 0;
 export const Home = () => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const [heroGame, setHeroGame] = useState(games[0]);
+  const [heroGame, setHeroGame] = useState(heros[0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsFlipped(!isFlipped);
 
       setTimeout(() => {
-        if (gameIndex < games.length - 1) gameIndex += 1;
-        else gameIndex = 0;
-        console.log("game index", gameIndex);
-        const newHeroGame = games[gameIndex];
+        if (heroIndex < heros.length - 1) heroIndex += 1;
+        else heroIndex = 0;
+        console.log("game index", heroIndex);
+        const newHeroGame = heros[heroIndex];
         console.log("new hero game", newHeroGame);
         setHeroGame(newHeroGame);
       }, 250);
@@ -43,7 +41,7 @@ export const Home = () => {
         </NavSubText>
       </NavContainer>
       <Separator />
-      <SplitContainer style={{ minHeight: "350px" }}>
+      <SplitContainer>
         <SplitLeft style={{ backgroundColor: "black" }}>
           <h3 style={{ fontSize: "25px" }}>
             Discover games to play with family and friends
@@ -52,12 +50,23 @@ export const Home = () => {
             Enjoy a night of getting into character and solving a mystery.
           </p>
         </SplitLeft>
-        <SplitRight style={{ backgroundColor: "#ffffff", padding: 20 }}>
+        <SplitRight
+          style={{
+            backgroundColor: "#ffffff",
+            padding: 20,
+            minHeight: "350px",
+          }}
+        >
           <CSSTransition in={!isFlipped} timeout={300} classNames="flip">
             <img
               src={heroGame.img}
               alt="enter"
-              style={{ width: "150px", borderRadius: "6px", flex: "1" }}
+              style={{
+                width: "150px",
+                maxHeight: "275px",
+                borderRadius: "6px",
+                flex: "1",
+              }}
             />
           </CSSTransition>
           <h3
@@ -78,7 +87,7 @@ export const Home = () => {
       <Separator />
       <FlexContainer style={{ padding: 10 }}>
         <h1 style={{ margin: 0, marginBottom: "10px", textAlign: "center" }}>
-          {games[0].name}
+          {heros[0].name}
         </h1>
         <p style={{ margin: 0, padding: 0, textAlign: "center" }}>
           Meet the players
@@ -114,12 +123,12 @@ export const Home = () => {
         <SplitLeft
           style={{ backgroundColor: "#ffffff", color: "black", padding: 40 }}
         >
-          <h1 style={{ padding: 0, margin: "5px 0" }}>What is it?</h1>
-          <p style={{ padding: 0, margin: "5px 0", lineHeight: "25px" }}>
+          <h1 style={{ padding: 0, margin: "10px 0" }}>What is it?</h1>
+          <p style={{ margin: "10px 0", lineHeight: "25px" }}>
             Mystery games are role-playing games where players evaluate the
             other players and clues to solve a mystery.
           </p>
-          <p style={{ padding: 0, margin: "5px 0", lineHeight: "25px" }}>
+          <p style={{ margin: "10px 0", lineHeight: "25px" }}>
             It is kind of like a Murder Mystery Game, but with only the mystery
             part.
           </p>
@@ -185,7 +194,7 @@ export const Home = () => {
             alignItems: "center",
           }}
         >
-          <h2>COMING SOON</h2>
+          <h2>Sign up to get access</h2>
           <img
             src={CityImg}
             alt="mansion"
