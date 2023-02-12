@@ -79,7 +79,7 @@ export const Home = () => {
           flexDirection: "row",
           alignItems: "flex-start",
           flexWrap: "wrap",
-          padding: 10,
+          padding: 5,
         }}
       >
         {characters.map((character, index) => {
@@ -111,18 +111,12 @@ export const Home = () => {
           style={{
             backgroundColor: "#f9f9f9",
             flexDirection: "row",
-            padding: "50px",
+            padding: "25px",
           }}
         >
-          <div>
-            <img
-              src={DoorImg}
-              alt="door"
-              style={{ width: "250px", borderRadius: "8px", flex: "1" }}
-            />
-          </div>
+          <DoorImage src={DoorImg} alt="door" />
 
-          <div style={{ padding: "10px" }}>
+          <div style={{ padding: "15px" }}>
             <UnderlineP>8 players</UnderlineP>
             <UnderlineP>Each character has a backstores</UnderlineP>
             <UnderlineP>Everyone tries to win</UnderlineP>
@@ -179,6 +173,14 @@ export const Home = () => {
   );
 };
 
+const DoorImage = styled.img`
+  width: 250px;
+  border-radius: 8px;
+  @media (max-width: 768px) {
+    width: 175px;
+  }
+`;
+
 const CharacterContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -188,8 +190,8 @@ const CharacterContainer = styled.div`
   width: 250px;
   min-height: 400px;
   @media (max-width: 768px) {
-    width: 200px;
-    min-height: 350px;
+    width: 175px;
+    min-height: 330px;
   }
 `;
 
