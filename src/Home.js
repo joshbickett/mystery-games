@@ -179,10 +179,9 @@ export const Home = () => {
             paddingBottom: 100,
           }}
         >
-          <h3>Sign up to learn more</h3>
-          <p>Learn more </p>
-          <input type="text" placeholder="Email" />
-          {/* <CallToActionButton>GET THE GAME</CallToActionButton> */}
+          <h2>Try it!</h2>
+
+          <CallToActionButton>GET THE GAME</CallToActionButton>
         </SplitRight>
 
         <SplitLeft
@@ -195,7 +194,7 @@ export const Home = () => {
             alignItems: "center",
           }}
         >
-          <h2>Sign up to get access</h2>
+          <h2>Do you have mystery solving skills?</h2>
           <img
             src={CityImg}
             alt="mansion"
