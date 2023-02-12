@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Entrance } from "./Entrance";
 import { Home } from "./Home";
+import { Payments } from "./Payments";
 
 const App = () => {
   const [entered, setEntered] = useState(false);
@@ -12,7 +13,7 @@ const App = () => {
       {entered && !showPaymentsPage && (
         <Home setShowPaymentsPage={setShowPaymentsPage} />
       )}
-      {showPaymentsPage && <div>Payments Page</div>}
+      {showPaymentsPage && <Payments />}
     </div>
   );
 };

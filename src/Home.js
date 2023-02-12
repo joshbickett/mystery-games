@@ -145,7 +145,9 @@ export const Home = ({ setShowPaymentsPage }) => {
 
           <div style={{ padding: "15px" }}>
             <DescriptionContainer>
-              <DescriptionHeader>Find 8 players</DescriptionHeader>
+              <DescriptionHeader>
+                Find 8 friends or family members to play
+              </DescriptionHeader>
               <DescriptionSubText>
                 Each get a role with a strategy to win
               </DescriptionSubText>
@@ -157,6 +159,14 @@ export const Home = ({ setShowPaymentsPage }) => {
               <DescriptionSubText>
                 Pay attention to other players backstories because the may have
                 clues
+              </DescriptionSubText>
+            </DescriptionContainer>
+            <DescriptionContainer>
+              <DescriptionHeader>
+                Dress up and get into character
+              </DescriptionHeader>
+              <DescriptionSubText>
+                Get creative with your costume and character
               </DescriptionSubText>
             </DescriptionContainer>
             <DescriptionContainer>
@@ -282,7 +292,7 @@ const Container = styled.div`
 const CallToActionButton = styled.div`
   cursor: pointer;
   margin: 15px;
-  font-size: 25px;
+  font-size: 35px;
   padding: 10px 40px;
   background-color: #ececec;
   color: black;
