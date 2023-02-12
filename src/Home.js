@@ -176,7 +176,6 @@ export const Home = () => {
           style={{
             backgroundColor: "black",
             color: "white",
-            paddingBottom: 100,
           }}
         >
           <h2>Try it!</h2>
