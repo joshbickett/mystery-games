@@ -64,15 +64,13 @@ const PlayingCardOverlay = styled.div`
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   color: white;
-  border-radius: 16px;
   width: 300px;
-  height: 500px;
+  height: 515px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   pointer-events: none;
-  padding: 50px;
 `;
 
 const PlayingCard = styled.img`
