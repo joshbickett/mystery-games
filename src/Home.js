@@ -43,7 +43,7 @@ export const Home = () => {
         </NavSubText>
       </NavContainer>
       <Separator />
-      <SplitContainer>
+      <SplitContainer style={{ minHeight: "350px" }}>
         <SplitLeft style={{ backgroundColor: "black" }}>
           <h3 style={{ fontSize: "25px" }}>
             Discover games to play with family and friends
@@ -60,7 +60,14 @@ export const Home = () => {
               style={{ width: "150px", borderRadius: "6px", flex: "1" }}
             />
           </CSSTransition>
-          <h3 style={{ fontSize: "25px", padding: 0, margin: 10 }}>
+          <h3
+            style={{
+              fontSize: "25px",
+              padding: 0,
+              margin: 10,
+              textAlign: "center",
+            }}
+          >
             {heroGame.name}
           </h3>
           <p style={{ padding: 0, margin: 0, textAlign: "center" }}>
@@ -70,8 +77,12 @@ export const Home = () => {
       </SplitContainer>
       <Separator />
       <FlexContainer style={{ padding: 10 }}>
-        <h1 style={{ margin: 0, marginBottom: "10px" }}>{games[0].name}</h1>
-        <p style={{ margin: 0, padding: 0 }}>Meet the players</p>
+        <h1 style={{ margin: 0, marginBottom: "10px", textAlign: "center" }}>
+          {games[0].name}
+        </h1>
+        <p style={{ margin: 0, padding: 0, textAlign: "center" }}>
+          Meet the players
+        </p>
       </FlexContainer>
 
       <FlexContainer
@@ -209,6 +220,7 @@ const DescriptionSubText = styled.p`
   margin: 0;
   padding: 5px 0;
   font-size: 12px;
+  text-align: left;
 `;
 
 const DescriptionContainer = styled.div`
