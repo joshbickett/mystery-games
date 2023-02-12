@@ -100,11 +100,17 @@ export const Home = () => {
       </FlexContainer>
       <Separator />
       <SplitContainer style={{ gridTemplateColumns: "1fr 2fr" }}>
-        <SplitLeft style={{ backgroundColor: "#ffffff", color: "black" }}>
-          <h1>How it works</h1>
-          <p>
+        <SplitLeft
+          style={{ backgroundColor: "#ffffff", color: "black", padding: 40 }}
+        >
+          <h1 style={{ padding: 0, margin: "5px 0" }}>What is it?</h1>
+          <p style={{ padding: 0, margin: "5px 0", lineHeight: "25px" }}>
+            Mystery games are role-playing games where players evaluate the
+            other players and clues to solve a mystery.
+          </p>
+          <p style={{ padding: 0, margin: "5px 0", lineHeight: "25px" }}>
             It is kind of like a Murder Mystery Game, but with only the mystery
-            part
+            part.
           </p>
         </SplitLeft>
         <SplitRight
@@ -117,11 +123,29 @@ export const Home = () => {
           <DoorImage src={DoorImg} alt="door" />
 
           <div style={{ padding: "15px" }}>
-            <UnderlineP>8 players</UnderlineP>
-            <UnderlineP>Each character has a backstores</UnderlineP>
-            <UnderlineP>Everyone tries to win</UnderlineP>
-            <UnderlineP>One mystery with an antagonist (villain)</UnderlineP>
-            <UnderlineP>Choose one game master</UnderlineP>
+            <DescriptionContainer>
+              <DescriptionHeader>Find 8 players</DescriptionHeader>
+              <DescriptionSubText>
+                Each get a role with a strategy to win
+              </DescriptionSubText>
+            </DescriptionContainer>
+            <DescriptionContainer>
+              <DescriptionHeader>
+                Each character has a backstores
+              </DescriptionHeader>
+              <DescriptionSubText>
+                Pay attention to other players backstories because the may have
+                clues
+              </DescriptionSubText>
+            </DescriptionContainer>
+            <DescriptionContainer>
+              <DescriptionHeader>
+                Solve the mystery and discover the villain
+              </DescriptionHeader>
+              <DescriptionSubText>
+                Each game has one villain and a mystery to be solved
+              </DescriptionSubText>
+            </DescriptionContainer>
           </div>
         </SplitRight>
       </SplitContainer>
@@ -181,6 +205,20 @@ const DoorImage = styled.img`
   }
 `;
 
+const DescriptionSubText = styled.p`
+  margin: 0;
+  padding: 5px 0;
+  font-size: 12px;
+`;
+
+const DescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+`;
+
 const CharacterContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -237,10 +275,11 @@ const CallToActionButton = styled.div`
   }
 `;
 
-const UnderlineP = styled.p`
+const DescriptionHeader = styled.p`
   font-size: 16px;
   text-align: left;
-  margin: 30px 0;
+  margin: 0;
+  font-weight: 600;
 `;
 
 const NavSubText = styled.p`
