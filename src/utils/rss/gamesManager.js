@@ -35,7 +35,7 @@ export const getHeros = () => {
     },
     {
       name: "You get a role",
-      img: CowboysImg,
+      img: WesternCharacterOne,
       subtext: "Try to solve the mystery to win the game.",
     },
   ];

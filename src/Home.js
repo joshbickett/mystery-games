@@ -9,6 +9,7 @@ import styled from "@emotion/styled";
 
 const heros = getHeros();
 const characters = getCharacters();
+
 let heroIndex = 0;
 export const Home = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -54,7 +55,7 @@ export const Home = () => {
           style={{
             backgroundColor: "#ffffff",
             padding: 20,
-            minHeight: "350px",
+            minHeight: "300px",
           }}
         >
           <CSSTransition in={!isFlipped} timeout={300} classNames="flip">
@@ -63,7 +64,7 @@ export const Home = () => {
               alt="enter"
               style={{
                 width: "150px",
-                maxHeight: "275px",
+                maxHeight: "225px",
                 borderRadius: "6px",
                 flex: "1",
               }}
