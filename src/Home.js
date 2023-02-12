@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import BrandLogoImage from "./images/brand-logo.png";
 import { CSSTransition } from "react-transition-group";
@@ -11,7 +11,7 @@ const heros = getHeros();
 const characters = getCharacters();
 
 let heroIndex = 0;
-export const Home = () => {
+export const Home = ({ setShowPaymentsPage }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const [heroGame, setHeroGame] = useState(heros[0]);
@@ -180,7 +180,9 @@ export const Home = () => {
         >
           <h2>Try it!</h2>
 
-          <CallToActionButton>GET THE GAME</CallToActionButton>
+          <CallToActionButton onClick={() => setShowPaymentsPage(true)}>
+            GET THE GAME
+          </CallToActionButton>
         </SplitRight>
 
         <SplitLeft
