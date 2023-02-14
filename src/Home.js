@@ -327,21 +327,6 @@ const NavSubText = styled.p`
   text-align: center;
 `;
 
-const NavItem = styled.h2`
-  cursor: pointer;
-  padding: 10px 40px;
-
-  color: white;
-  border-radius: 15px;
-  user-select: none;
-  &:hover {
-    background-color: black;
-  }
-  &:active {
-    scale: 1.02;
-  }
-`;
-
 const Separator = styled.div`
   display: flex;
   flex-direction: column;

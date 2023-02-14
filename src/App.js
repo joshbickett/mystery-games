@@ -1,19 +1,27 @@
 import { useState } from "react";
 import "./App.css";
 import { Entrance } from "./Entrance";
+import { Game } from "./Game";
 import { Home } from "./Home";
 import { Payments } from "./Payments";
 
 const App = () => {
   const [entered, setEntered] = useState(false);
   const [showPaymentsPage, setShowPaymentsPage] = useState(false);
+  const [showGamePage, setShowGamePage] = useState(false);
+
   return (
     <div>
-      {!entered && !showPaymentsPage && <Entrance setEntered={setEntered} />}
-      {entered && !showPaymentsPage && (
+      {!entered && !showPaymentsPage && !showGamePage && (
+        <Entrance setEntered={setEntered} />
+      )}
+      {entered && !showPaymentsPage && !showGamePage && (
         <Home setShowPaymentsPage={setShowPaymentsPage} />
       )}
-      {showPaymentsPage && <Payments />}
+      {showPaymentsPage && !showGamePage && (
+        <Payments setShowGamePage={setShowGamePage} />
+      )}
+      {showGamePage && !showPaymentsPage && <Game />}
     </div>
   );
 };

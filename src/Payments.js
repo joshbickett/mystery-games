@@ -1,24 +1,41 @@
 import styled from "@emotion/styled";
 import TextField from "@mui/material/TextField";
+import { useState } from "react";
 import KeyFourImage from "./images/key-4.jpeg";
 
-export const Payments = () => {
+export const Payments = ({ setShowGamePage }) => {
   // enter your email in the field
+  const [email, setEmail] = useState("");
+
+  const goToGameAssets = () => {
+    console.log("go to game assets");
+    if (email === "abc") setShowGamePage(true);
+  };
   return (
     <Container>
       <LeftSplit>
         <FormContainer>
-          <h1>GET THE GAME</h1>
-          <p>Enter in your access code</p>
-          <TextField id="outlined-basic" label="Email" variant="outlined" />
-          <button>Get Access</button>
+          <h2>Enter in your code</h2>
+
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            variant="outlined"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            value={email}
+          />
+          <CallToActionButton onClick={goToGameAssets}>
+            GET THE GAME
+          </CallToActionButton>
         </FormContainer>
       </LeftSplit>
       <RightSplit>
         <img
           src={KeyFourImage}
           alt="key"
-          style={{ width: "300px", borderRadius: "40px" }}
+          style={{ width: "300px", borderRadius: "40px", margin: 20 }}
         />
       </RightSplit>
     </Container>
@@ -39,6 +56,25 @@ const Container = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+  }
+`;
+
+const CallToActionButton = styled.button`
+  cursor: pointer;
+  margin: 15px;
+  font-size: 35px;
+  padding: 10px 40px;
+  background-color: #ececec;
+  color: black;
+  border-radius: 15px;
+  user-select: none;
+  border: none;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+  &:active {
+    scale: 1.1;
   }
 `;
 
