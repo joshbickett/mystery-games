@@ -37,9 +37,7 @@ export const Home = ({ setShowPaymentsPage }) => {
     <Container>
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
-        <NavSubText>
-          Developed in partnership between Humans and AI (HI & AI)
-        </NavSubText>
+        <NavSubText>Developed in partnership between Humans and AI</NavSubText>
       </NavContainer>
       <Separator />
       <SplitContainer>
@@ -119,7 +117,11 @@ export const Home = ({ setShowPaymentsPage }) => {
       <Separator />
       <SplitContainer style={{ gridTemplateColumns: "1fr 2fr" }}>
         <SplitLeft
-          style={{ backgroundColor: "#ffffff", color: "black", padding: 40 }}
+          style={{
+            backgroundColor: "#ffffff",
+            color: "black",
+            padding: "20px 40px",
+          }}
         >
           <h1 style={{ padding: 0, margin: "10px 0" }}>What is it?</h1>
           <p style={{ margin: "10px 0", lineHeight: "25px" }}>
