@@ -87,12 +87,9 @@ export const Home = ({ setShowPaymentsPage }) => {
       </SplitContainer>
       <Separator />
       <FlexContainer style={{ padding: 10 }}>
-        <h1 style={{ margin: 0, marginBottom: "10px", textAlign: "center" }}>
-          {heros[0].name}
-        </h1>
-        <p style={{ margin: 0, padding: 0, textAlign: "center" }}>
+        <h1 style={{ margin: 0, margin: 10, textAlign: "center" }}>
           Meet the players
-        </p>
+        </h1>
       </FlexContainer>
 
       <FlexContainer
@@ -205,7 +202,7 @@ export const Home = ({ setShowPaymentsPage }) => {
             alignItems: "center",
           }}
         >
-          <h2>Do you have mystery solving skills?</h2>
+          <h2>{heros[0].name}</h2>
           <img
             src={CityImg}
             alt="mansion"
