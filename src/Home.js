@@ -134,10 +134,9 @@ export const Home = ({ setShowPaymentsPage }) => {
             part.
           </p>
         </SplitLeft>
-        <SplitRight
+        <SplitRightRow
           style={{
             backgroundColor: "#f9f9f9",
-            flexDirection: "row",
             padding: "25px",
           }}
         >
@@ -178,7 +177,7 @@ export const Home = ({ setShowPaymentsPage }) => {
               </DescriptionSubText>
             </DescriptionContainer>
           </div>
-        </SplitRight>
+        </SplitRightRow>
       </SplitContainer>
       <Separator />
       <SplitContainer>
@@ -186,6 +185,7 @@ export const Home = ({ setShowPaymentsPage }) => {
           style={{
             backgroundColor: "black",
             color: "white",
+            padding: 0,
           }}
         >
           <h2>Try it!</h2>
@@ -240,7 +240,22 @@ const DescriptionSubText = styled.p`
   margin: 0;
   padding: 5px 0;
   font-size: 12px;
+  width: 100%;
   text-align: left;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;
+
+const DescriptionHeader = styled.p`
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const DescriptionContainer = styled.div`
@@ -305,13 +320,6 @@ const CallToActionButton = styled.div`
   &:active {
     scale: 1.02;
   }
-`;
-
-const DescriptionHeader = styled.p`
-  font-size: 16px;
-  text-align: left;
-  margin: 0;
-  font-weight: 600;
 `;
 
 const NavSubText = styled.p`
@@ -409,13 +417,25 @@ const SplitLeft = styled.div`
 const SplitRight = styled.div`
   display: flex;
   flex-direction: column;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 75px;
   @media (max-width: 768px) {
     align-items: center;
     text-align: center;
+    padding: 25px;
+  }
+`;
+
+const SplitRightRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 75px;
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
     padding: 25px;
   }
 `;
