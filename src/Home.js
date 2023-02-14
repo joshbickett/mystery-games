@@ -44,7 +44,7 @@ export const Home = ({ setShowPaymentsPage }) => {
       <Separator />
       <SplitContainer>
         <SplitLeft style={{ backgroundColor: "black" }}>
-          <h3 style={{ fontSize: "25px" }}>
+          <h3 style={{ fontSize: "25px", margin: 0, marginBottom: 15 }}>
             Discover games to play with family and friends
           </h3>
           <p style={{ padding: 0, margin: 0 }}>
@@ -258,10 +258,10 @@ const CharacterContainer = styled.div`
   justify-content: flex-start;
   margin: 10px;
   width: 250px;
-  min-height: 400px;
+  min-height: 380px;
   @media (max-width: 768px) {
     width: 175px;
-    min-height: 330px;
+    min-height: 225px;
   }
 `;
 
@@ -398,7 +398,7 @@ const SplitLeft = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  padding: 10px 75px;
+  padding: 25px 75px;
   color: white;
   @media (max-width: 768px) {
     align-items: center;

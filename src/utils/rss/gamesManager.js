@@ -80,7 +80,7 @@ export const getCharacters = () => {
     },
     {
       name: "Sheriff Jerry Hardlaw",
-      description: "Local Mondred County Sheriff",
+      description: "Local County Sheriff",
       img: WesternCharacterEight,
     },
   ];
