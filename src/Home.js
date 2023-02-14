@@ -303,7 +303,7 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
-const CallToActionButton = styled.div`
+const CallToActionButton = styled.button`
   cursor: pointer;
   margin: 15px;
   font-size: 35px;
@@ -312,12 +312,13 @@ const CallToActionButton = styled.div`
   color: black;
   border-radius: 15px;
   user-select: none;
+  border: none;
   &:hover {
     background-color: black;
     color: white;
   }
   &:active {
-    scale: 1.02;
+    scale: 1.1;
   }
 `;
 
