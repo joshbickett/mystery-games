@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import PlayingCardImage from "./images/playing-card-1.jpg";
 
-export const Entrance = ({ setShowEntrance }) => {
+export const Entrance = ({ setEntered }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -14,10 +14,10 @@ export const Entrance = ({ setShowEntrance }) => {
   useEffect(() => {
     if (isFlipped) {
       setTimeout(() => {
-        setShowEntrance(false);
+        setEntered(true);
       }, [1000]);
     }
-  }, [isFlipped, setShowEntrance]);
+  }, [isFlipped, setEntered]);
 
   return (
     <Container>

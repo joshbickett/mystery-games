@@ -7,14 +7,21 @@ import CityImg from "./images/city.jpeg";
 import DoorImg from "./images/door-to-no-where.jpeg";
 import styled from "@emotion/styled";
 
+import { useNavigate } from "react-router-dom";
+
 const heros = getHeros();
 const characters = getCharacters();
 
 let heroIndex = 0;
-export const Home = ({ setShowHome }) => {
+export const LandingDetail = () => {
+  const navigate = useNavigate();
   const [isFlipped, setIsFlipped] = useState(false);
 
   const [heroGame, setHeroGame] = useState(heros[0]);
+
+  const navigateToPayment = () => {
+    navigate("/payments");
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -59,7 +66,7 @@ export const Home = ({ setShowHome }) => {
             <img
               src={heroGame.img}
               alt="enter"
-              onClick={() => setShowHome(false)}
+              onClick={navigateToPayment}
               style={{
                 width: "150px",
                 maxHeight: "225px",
@@ -75,13 +82,13 @@ export const Home = ({ setShowHome }) => {
               margin: 10,
               textAlign: "center",
             }}
-            onClick={() => setShowHome(false)}
+            onClick={navigateToPayment}
           >
             {heroGame.name}
           </h3>
           <p
             style={{ padding: 0, margin: 0, textAlign: "center" }}
-            onClick={() => setShowHome(false)}
+            onClick={navigateToPayment}
           >
             {heroGame.subtext}
           </p>
@@ -193,7 +200,7 @@ export const Home = ({ setShowHome }) => {
         >
           <h2>Try it!</h2>
 
-          <CallToActionButton onClick={() => setShowHome(false)}>
+          <CallToActionButton onClick={navigateToPayment}>
             GET THE GAME
           </CallToActionButton>
         </SplitRight>
@@ -208,17 +215,14 @@ export const Home = ({ setShowHome }) => {
             alignItems: "center",
           }}
         >
-          <h2
-            onClick={() => setShowHome(false)}
-            style={{ textAlign: "center" }}
-          >
+          <h2 onClick={navigateToPayment} style={{ textAlign: "center" }}>
             {heros[0].name}
           </h2>
           <img
             src={CityImg}
             alt="mansion"
             style={{ width: 300, borderRadius: "8px" }}
-            onClick={() => setShowHome(false)}
+            onClick={navigateToPayment}
           />
         </SplitLeft>
       </SplitContainer>
