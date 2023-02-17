@@ -8,9 +8,9 @@ import DoorImg from "./images/door-to-no-where.jpeg";
 import styled from "@emotion/styled";
 
 import { useNavigate } from "react-router-dom";
+import { Characters } from "./components/Characters";
 
 const heros = getHeros();
-const characters = getCharacters();
 
 let heroIndex = 0;
 export const LandingDetail = () => {
@@ -100,31 +100,8 @@ export const LandingDetail = () => {
           Meet the players
         </h1>
       </FlexContainer>
+      <Characters />
 
-      <FlexContainer
-        style={{
-          flexDirection: "row",
-          alignItems: "flex-start",
-          flexWrap: "wrap",
-          padding: 5,
-        }}
-      >
-        {characters.map((character, index) => {
-          return (
-            <CharacterContainer>
-              <CharacterImage src={character.img} alt={`char${index}`} />
-              <InnerCharacterContainer>
-                <h4 style={{ textAlign: "center", margin: 5 }}>
-                  {character.name}
-                </h4>
-                <p style={{ textAlign: "center", margin: 0 }}>
-                  {character.description}
-                </p>
-              </InnerCharacterContainer>
-            </CharacterContainer>
-          );
-        })}
-      </FlexContainer>
       <Separator />
       <SplitContainer style={{ gridTemplateColumns: "1fr 2fr" }}>
         <SplitLeft
@@ -277,35 +254,6 @@ const DescriptionContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 10px;
-`;
-
-const CharacterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 10px;
-  width: 250px;
-  min-height: 380px;
-  @media (max-width: 768px) {
-    width: 175px;
-    min-height: 225px;
-  }
-`;
-
-const InnerCharacterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-`;
-
-const CharacterImage = styled.img`
-  width: 200px;
-  border-radius: 8px;
-  @media (max-width: 768px) {
-    width: 150px;
-  }
 `;
 
 // opacity just a little

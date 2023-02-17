@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Characters } from "./components/Characters";
 import BrandLogoImage from "./images/brand-logo.png";
 
 export const Game = ({ game, setGame }) => {
@@ -7,7 +8,7 @@ export const Game = ({ game, setGame }) => {
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
       </NavContainer>
-      Game
+      <Characters />
     </Container>
   );
 };
