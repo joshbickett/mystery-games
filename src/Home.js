@@ -11,7 +11,7 @@ const heros = getHeros();
 const characters = getCharacters();
 
 let heroIndex = 0;
-export const Home = ({ setShowPaymentsPage }) => {
+export const Home = ({ setShowHome }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const [heroGame, setHeroGame] = useState(heros[0]);
@@ -59,7 +59,7 @@ export const Home = ({ setShowPaymentsPage }) => {
             <img
               src={heroGame.img}
               alt="enter"
-              onClick={() => setShowPaymentsPage(true)}
+              onClick={() => setShowHome(false)}
               style={{
                 width: "150px",
                 maxHeight: "225px",
@@ -75,13 +75,13 @@ export const Home = ({ setShowPaymentsPage }) => {
               margin: 10,
               textAlign: "center",
             }}
-            onClick={() => setShowPaymentsPage(true)}
+            onClick={() => setShowHome(false)}
           >
             {heroGame.name}
           </h3>
           <p
             style={{ padding: 0, margin: 0, textAlign: "center" }}
-            onClick={() => setShowPaymentsPage(true)}
+            onClick={() => setShowHome(false)}
           >
             {heroGame.subtext}
           </p>
@@ -193,7 +193,7 @@ export const Home = ({ setShowPaymentsPage }) => {
         >
           <h2>Try it!</h2>
 
-          <CallToActionButton onClick={() => setShowPaymentsPage(true)}>
+          <CallToActionButton onClick={() => setShowHome(false)}>
             GET THE GAME
           </CallToActionButton>
         </SplitRight>
@@ -208,12 +208,17 @@ export const Home = ({ setShowPaymentsPage }) => {
             alignItems: "center",
           }}
         >
-          <h2 onClick={() => setShowPaymentsPage(true)}>{heros[0].name}</h2>
+          <h2
+            onClick={() => setShowHome(false)}
+            style={{ textAlign: "center" }}
+          >
+            {heros[0].name}
+          </h2>
           <img
             src={CityImg}
             alt="mansion"
             style={{ width: 300, borderRadius: "8px" }}
-            onClick={() => setShowPaymentsPage(true)}
+            onClick={() => setShowHome(false)}
           />
         </SplitLeft>
       </SplitContainer>

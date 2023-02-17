@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { Entrance } from "./Entrance";
 import { Game } from "./Game";
@@ -6,22 +6,39 @@ import { Home } from "./Home";
 import { Payments } from "./Payments";
 
 const App = () => {
-  const [entered, setEntered] = useState(false);
+  const [showEntrance, setShowEntrance] = useState(true);
   const [showPaymentsPage, setShowPaymentsPage] = useState(false);
   const [showGamePage, setShowGamePage] = useState(false);
+  const [showHome, setShowHome] = useState(false);
+  useEffect(() => {
+    if (!showEntrance) {
+      setShowHome(true);
+      setShowGamePage(false);
+      setShowPaymentsPage(false);
+    }
+  }, [showEntrance]);
+
+  useEffect(() => {
+    if (!showHome) {
+      setShowPaymentsPage(true);
+    }
+  }, [showHome]);
+
+  useEffect(() => {
+    console.log("show game page");
+    if (!showPaymentsPage) {
+      setShowGamePage(true);
+    }
+  }, [showPaymentsPage]);
 
   return (
     <div>
-      {!entered && !showPaymentsPage && !showGamePage && (
-        <Entrance setEntered={setEntered} />
+      {showEntrance && <Entrance setShowEntrance={setShowEntrance} />}
+      {showHome && <Home setShowHome={setShowHome} />}
+      {showPaymentsPage && (
+        <Payments setShowPaymentsPage={setShowPaymentsPage} />
       )}
-      {entered && !showPaymentsPage && !showGamePage && (
-        <Home setShowPaymentsPage={setShowPaymentsPage} />
-      )}
-      {showPaymentsPage && !showGamePage && (
-        <Payments setShowGamePage={setShowGamePage} />
-      )}
-      {showGamePage && !showPaymentsPage && <Game />}
+      {showGamePage && <Game />}
     </div>
   );
 };

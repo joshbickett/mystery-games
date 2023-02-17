@@ -3,13 +3,13 @@ import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import KeyFourImage from "./images/key-4.jpeg";
 
-export const Payments = ({ setShowGamePage }) => {
+export const Payments = ({ setShowPaymentsPage }) => {
   // enter your email in the field
   const [email, setEmail] = useState("");
 
   const goToGameAssets = () => {
     console.log("go to game assets");
-    if (email === "abc") setShowGamePage(true);
+    if (email === "abc") setShowPaymentsPage(false);
   };
   return (
     <Container>
