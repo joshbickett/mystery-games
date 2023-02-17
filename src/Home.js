@@ -37,7 +37,6 @@ export const Home = ({ setShowPaymentsPage }) => {
     <Container>
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
-        <NavSubText>Developed in partnership between Humans and AI</NavSubText>
       </NavContainer>
       <Separator />
       <SplitContainer>
@@ -60,6 +59,7 @@ export const Home = ({ setShowPaymentsPage }) => {
             <img
               src={heroGame.img}
               alt="enter"
+              onClick={() => setShowPaymentsPage(true)}
               style={{
                 width: "150px",
                 maxHeight: "225px",
@@ -75,10 +75,14 @@ export const Home = ({ setShowPaymentsPage }) => {
               margin: 10,
               textAlign: "center",
             }}
+            onClick={() => setShowPaymentsPage(true)}
           >
             {heroGame.name}
           </h3>
-          <p style={{ padding: 0, margin: 0, textAlign: "center" }}>
+          <p
+            style={{ padding: 0, margin: 0, textAlign: "center" }}
+            onClick={() => setShowPaymentsPage(true)}
+          >
             {heroGame.subtext}
           </p>
         </SplitRight>
@@ -204,11 +208,12 @@ export const Home = ({ setShowPaymentsPage }) => {
             alignItems: "center",
           }}
         >
-          <h2>{heros[0].name}</h2>
+          <h2 onClick={() => setShowPaymentsPage(true)}>{heros[0].name}</h2>
           <img
             src={CityImg}
             alt="mansion"
             style={{ width: 300, borderRadius: "8px" }}
+            onClick={() => setShowPaymentsPage(true)}
           />
         </SplitLeft>
       </SplitContainer>
