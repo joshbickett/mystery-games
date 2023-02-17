@@ -49,10 +49,10 @@ export const LandingDetail = () => {
       <SplitContainer>
         <SplitLeft style={{ backgroundColor: "black" }}>
           <h3 style={{ fontSize: "25px", margin: 0, marginBottom: 15 }}>
-            Discover games to play with family and friends
+            Discover the mystery with Family and Friends
           </h3>
           <p style={{ padding: 0, margin: 0 }}>
-            Enjoy a night of getting into character and solving a mystery.
+            Host a game night and get into character.
           </p>
         </SplitLeft>
         <SplitRight

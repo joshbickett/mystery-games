@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Characters } from "./components/Characters";
+import { Instructions } from "./components/Instructions";
 import BrandLogoImage from "./images/brand-logo.png";
 
 export const Game = ({ game, setGame }) => {
@@ -8,10 +9,19 @@ export const Game = ({ game, setGame }) => {
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
       </NavContainer>
+      <Instructions />
       <Characters />
     </Container>
   );
 };
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
 
 const BrandHeader = styled.img`
   width: 300px;
