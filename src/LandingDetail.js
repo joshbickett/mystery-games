@@ -100,7 +100,7 @@ export const LandingDetail = () => {
           Meet the players
         </h1>
       </FlexContainer>
-      <Characters />
+      <Characters preview={true} />
 
       <Separator />
       <SplitContainer style={{ gridTemplateColumns: "1fr 2fr" }}>

@@ -1,14 +1,33 @@
 import styled from "@emotion/styled";
 import { getCharacters } from "../utils/rss/gamesManager";
+import ChangeCircleOutlinedIcon from "@mui/icons-material/ChangeCircleOutlined";
 
 const characters = getCharacters();
 
-export const Characters = () => {
+export const Characters = ({ preview }) => {
   return (
-    <FlexContainer style={{}}>
+    <Container>
       {characters.map((character, index) => {
         return (
           <CharacterContainer>
+            {!preview && (
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 2fr 1fr",
+                  width: "100%",
+                }}
+              >
+                <div></div>
+                <FlexContainer>
+                  <ShareCardButton>Share card</ShareCardButton>
+                </FlexContainer>
+
+                <FlexContainer>
+                  <ChangeCircleOutlinedIcon style={{ cursor: "pointer" }} />
+                </FlexContainer>
+              </div>
+            )}
             <CharacterImage src={character.img} alt={`char${index}`} />
             <InnerCharacterContainer>
               <h4 style={{ textAlign: "center", margin: 5 }}>
@@ -21,18 +40,39 @@ export const Characters = () => {
           </CharacterContainer>
         );
       })}
-    </FlexContainer>
+    </Container>
   );
 };
 
-const FlexContainer = styled.div`
+const ShareCardButton = styled.button`
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  cursor: pointer;
+  &:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+`;
+
+const Container = styled.div`
   display: flex;
   flex-direction: row;
-
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   padding: 5px;
+  width: 100%;
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 `;
 
