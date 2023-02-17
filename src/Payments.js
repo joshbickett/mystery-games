@@ -1,15 +1,17 @@
 import styled from "@emotion/styled";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import KeyFourImage from "./images/key-4.jpeg";
 
 export const Payments = ({ setShowPaymentsPage }) => {
   // enter your email in the field
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   const goToGameAssets = () => {
     console.log("go to game assets");
-    if (email === "abc") setShowPaymentsPage(false);
+    if (email === "abc") navigate("/game");
   };
   return (
     <Container>

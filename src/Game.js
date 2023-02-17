@@ -1,3 +1,39 @@
+import styled from "@emotion/styled";
+import BrandLogoImage from "./images/brand-logo.png";
+
 export const Game = ({ game, setGame }) => {
-  return <div>Game</div>;
+  return (
+    <Container>
+      <NavContainer>
+        <BrandHeader src={BrandLogoImage} alt="mansion" />
+      </NavContainer>
+      Game
+    </Container>
+  );
 };
+
+const BrandHeader = styled.img`
+  width: 300px;
+  border-radius: 16px;
+`;
+
+const NavContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: black;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const Container = styled.div`
+  min-height: 100vh;
+  background-color: #ffffff;
+
+  color: black;
+  overflow: hidden;
+`;
