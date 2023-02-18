@@ -15,6 +15,8 @@ export const Instructions = ({ preview }) => {
           <h3 style={{ textAlign: "center" }}>YOUR JOB</h3>
           <h4>1. Share the character cards with each player. </h4>
           <h4>2. Print off the props and place them around the house.</h4>
+          <h4>3. Answer questions throughout the game for players</h4>
+          <h4>4. Most importantly, get into character and enjoy yourself</h4>
         </p>
       )}
     </Container>
