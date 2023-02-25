@@ -28,6 +28,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  width: 100%;
+  margin: 20px;
+  width: 600px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 16px;
 `;
