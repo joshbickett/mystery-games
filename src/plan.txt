@@ -1,0 +1,3 @@
+ - create basic asset pages and View
+ - give twitter people an access code if interested to get feedback, advertise "free for beta users"
+ - after feedback, add payment and launch
