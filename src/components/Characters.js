@@ -4,7 +4,7 @@ import ChangeCircleOutlinedIcon from "@mui/icons-material/ChangeCircleOutlined";
 
 const characters = getCharacters();
 
-export const Characters = ({ preview }) => {
+export const Characters = ({ preview, navigateToCharacter }) => {
   return (
     <Container>
       {characters.map((character, index) => {
@@ -19,7 +19,11 @@ export const Characters = ({ preview }) => {
                 }}
               >
                 <FlexContainer>
-                  <ShareCardButton>View</ShareCardButton>
+                  <ShareCardButton
+                    onClick={() => navigateToCharacter(character.id)}
+                  >
+                    View
+                  </ShareCardButton>
                 </FlexContainer>
 
                 <FlexContainer>

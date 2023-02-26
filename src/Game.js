@@ -2,15 +2,22 @@ import styled from "@emotion/styled";
 import { Characters } from "./components/Characters";
 import { Instructions } from "./components/Instructions";
 import BrandLogoImage from "./images/brand-logo.png";
+import { useNavigate } from "react-router-dom";
 
 export const Game = ({ game, setGame }) => {
+  const navigate = useNavigate();
+
+  const navigateToCharacter = (id) => {
+    // navigate to /game/character with the id in the get params
+    navigate(`/game/character/${id}`);
+  };
   return (
     <Container>
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
       </NavContainer>
       <Instructions />
-      <Characters />
+      <Characters navigateToCharacter={navigateToCharacter} />
     </Container>
   );
 };
