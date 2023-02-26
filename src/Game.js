@@ -47,4 +47,8 @@ const Container = styled.div`
 
   color: black;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
