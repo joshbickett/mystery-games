@@ -15,14 +15,6 @@ export const Game = ({ game, setGame }) => {
   );
 };
 
-const FlexContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-`;
-
 const BrandHeader = styled.img`
   width: 300px;
   border-radius: 16px;
@@ -44,6 +36,7 @@ const NavContainer = styled.div`
 const Container = styled.div`
   min-height: 100vh;
   background-color: #ffffff;
+  padding: 20px;
 
   color: black;
   overflow: hidden;

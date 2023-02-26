@@ -13,14 +13,17 @@ export const Characters = ({ preview }) => {
             {!preview && (
               <div
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 2fr 1fr",
+                  display: "flex",
+                  alignItems: "center",
                   width: "100%",
                 }}
               >
-                <div></div>
                 <FlexContainer>
-                  <ShareCardButton>Share card</ShareCardButton>
+                  <ShareCardButton>View</ShareCardButton>
+                </FlexContainer>
+
+                <FlexContainer>
+                  <ShareCardButton>Share</ShareCardButton>
                 </FlexContainer>
 
                 <FlexContainer>
@@ -52,6 +55,7 @@ const ShareCardButton = styled.button`
   margin: 5px;
   width: 100%;
   cursor: pointer;
+  user-select: none;
   &:hover {
     background-color: #000000;
     color: #ffffff;
