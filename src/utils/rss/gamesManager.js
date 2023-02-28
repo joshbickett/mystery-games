@@ -48,7 +48,7 @@ export const getCharacters = () => {
       description: "The fortune teller",
       img: WesternCharacterTwo,
       id: "dfa66402-525b-4dd4-8246-0c7d5efcb3a9",
-      freeToShare: [
+      shareable: [
         "My fortune-telling powers allow me to answer 1 yes/no question from everyone here in town",
       ],
     },

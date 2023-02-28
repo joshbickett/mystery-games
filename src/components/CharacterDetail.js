@@ -6,6 +6,20 @@ export const CharacterDetail = ({ character }) => {
       <h1>{character.name}</h1>
       <CharacterImg src={character.img} alt={character.name} />
       <h4>{character.description}</h4>
+      {character.shareable && <h5>Info you’re free to share</h5>}
+
+      {character.shareable.map((info) => {
+        return <p>{info}</p>;
+      })}
+
+      {character.trust && (
+        <>
+          <h5>Things to share with only those you trust</h5>
+          {character?.trust?.map((info) => {
+            return <p>{info}</p>;
+          })}
+        </>
+      )}
     </Container>
   );
 };
