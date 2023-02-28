@@ -8,15 +8,15 @@ export const CharacterDetail = ({ character }) => {
       <h4>{character.description}</h4>
       {character.shareable && <h5>Info you’re free to share</h5>}
 
-      {character.shareable.map((info) => {
-        return <p>{info}</p>;
+      {character.shareable.map((info, id) => {
+        return <p key={id}>{info}</p>;
       })}
 
       {character.trust && (
         <>
           <h5>Things to share with only those you trust</h5>
-          {character?.trust?.map((info) => {
-            return <p>{info}</p>;
+          {character?.trust?.map((info, id) => {
+            return <p key={id}>{info}</p>;
           })}
         </>
       )}
