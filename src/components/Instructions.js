@@ -14,18 +14,55 @@ export const Instructions = () => {
           know the answer.
         </ImportantText>
       </SplitLeft>
-      <SplitRight style={{ backgroundColor: "#ececec" }}>
+      <SplitRight
+        style={{
+          backgroundColor: "#ececec",
+          padding: 30,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <div>
-          <h3>YOUR JOB</h3>
-          <h4>1. Share the character cards with each player. </h4>
-          <h4>2. Print off the props and place them around the house.</h4>
-          <h4>3. Answer questions throughout the game for players</h4>
-          <h4>4. Most importantly, get into character and enjoy yourself</h4>
+          <InstructionSubHeader>What you'll need</InstructionSubHeader>
+          <InstructionText>9 Players including yourself</InstructionText>
+          <InstructionText>A printer</InstructionText>
+          <InstructionText>To read the instructions</InstructionText>
+        </div>
+        <div>
+          <InstructionSubHeader>Your job</InstructionSubHeader>
+          <InstructionText>
+            <strong>1.</strong> Share a character cards with each player
+          </InstructionText>
+          <InstructionText>
+            <strong>2.</strong> Print off the props and place them around the
+            house
+          </InstructionText>
+          <InstructionText>
+            <strong>3.</strong> Answer questions throughout the game for players
+          </InstructionText>
+          <InstructionText>
+            <strong>4.</strong> Most importantly, get into character and enjoy
+            yourself
+          </InstructionText>
         </div>
       </SplitRight>
     </SplitContainer>
   );
 };
+
+// underlined text
+const InstructionSubHeader = styled.h3`
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-align: center;
+`;
+
+const InstructionText = styled.p`
+  font-size: 18px;
+  text-align: center;
+`;
 
 const ImportantText = styled.p`
   font-size: 18px;

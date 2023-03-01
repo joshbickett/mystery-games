@@ -3,6 +3,7 @@ import { Characters } from "./components/Characters";
 import { Instructions } from "./components/Instructions";
 
 import { useNavigate } from "react-router-dom";
+import { GameProps } from "./components/GameProps";
 
 export const Game = ({ game, setGame }) => {
   const navigate = useNavigate();
@@ -15,9 +16,10 @@ export const Game = ({ game, setGame }) => {
     <Container>
       <Instructions />
       <CharacterContainer>
-        <h1>Characters</h1>
+        <h1>1. Characters</h1>
         <Characters navigateToCharacter={navigateToCharacter} />
       </CharacterContainer>
+      <GameProps />
     </Container>
   );
 };
