@@ -7,12 +7,12 @@ import KeyFourImage from "./images/key-4.jpeg";
 
 export const Payments = ({ setShowPaymentsPage }) => {
   // enter your email in the field
-  const [email, setEmail] = useState("");
+  const [code, setCode] = useState("");
   const navigate = useNavigate();
 
   const goToGameAssets = () => {
     console.log("go to game assets");
-    if (email === "abc") navigate("/game");
+    if (code === "ai-games") navigate("/game");
   };
   return (
     <Container>
@@ -22,12 +22,12 @@ export const Payments = ({ setShowPaymentsPage }) => {
 
           <TextField
             id="outlined-basic"
-            label="Email"
+            label="Access Code"
             variant="outlined"
             onChange={(e) => {
-              setEmail(e.target.value);
+              setCode(e.target.value);
             }}
-            value={email}
+            value={code}
           />
           <CallToActionButton onClick={goToGameAssets}>
             GET THE GAME
