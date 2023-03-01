@@ -23,9 +23,9 @@ export const CharacterDetail = ({ character }) => {
           <CharacterImg src={character.img} alt={character.name} />
         </OverviewContainer>
 
-        <div>
+        <InformationContainer id="info-container">
           {character.shareable && (
-            <InfoContainer>
+            <Information>
               <h5>Info you’re free to share</h5>
 
               <div>
@@ -33,24 +33,34 @@ export const CharacterDetail = ({ character }) => {
                   return <SubText key={id}>{info}</SubText>;
                 })}
               </div>
-            </InfoContainer>
+            </Information>
           )}
 
           {character.trust && (
-            <InfoContainer>
+            <Information>
               <h5>Things to share with only those you trust</h5>
               <div>
                 {character?.trust?.map((info, id) => {
                   return <SubText key={id}>{info}</SubText>;
                 })}
               </div>
-            </InfoContainer>
+            </Information>
           )}
-        </div>
+        </InformationContainer>
       </InnerContainer>
     </Container>
   );
 };
+
+const InformationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  margin: 20px;
+  gap: 20px;
+`;
 
 const BackButton = styled(ArrowBackIosIcon)`
   color: gray;
@@ -78,12 +88,14 @@ const Container = styled.div`
 `;
 
 const InnerContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
   background-color: #ffffff;
   color: black;
-  @media (max-width: 768px) {
-  }
+  height: 600px;
 `;
 
 const OverviewContainer = styled.div`
@@ -125,12 +137,11 @@ const SubText = styled.p`
   font-size: 14px;
 `;
 
-const InfoContainer = styled.div`
+const Information = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   width: 500px;
   background-color: #ececec;
   border-radius: 16px;
   padding: 20px;
-  margin: 20px;
 `;
