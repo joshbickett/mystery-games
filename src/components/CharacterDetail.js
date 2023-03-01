@@ -1,10 +1,15 @@
 import styled from "@emotion/styled";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { useNavigate } from "react-router-dom";
 
 export const CharacterDetail = ({ character }) => {
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate("/game");
+  };
   return (
     <Container>
-      <BackButtonContainer>
+      <BackButtonContainer onClick={goBack}>
         <BackButton />
         <BackText>Back</BackText>
       </BackButtonContainer>
@@ -50,17 +55,11 @@ export const CharacterDetail = ({ character }) => {
 const BackButton = styled(ArrowBackIosIcon)`
   color: gray;
   font-size: 24px;
-  &:hover {
-    transform: scale(1.1);
-  }
 `;
 
 const BackText = styled.div`
   color: gray;
   font-size: 18px;
-  &:hover {
-    transform: scale(1.1);
-  }
 `;
 
 // resize on hover
@@ -69,7 +68,7 @@ const BackButtonContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin: 20px;
+  margin: 30px;
   cursor: pointer;
   user-select: none;
 `;
