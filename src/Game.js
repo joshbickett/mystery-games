@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Characters } from "./components/Characters";
 import { Instructions } from "./components/Instructions";
-import BrandLogoImage from "./images/brand-logo.png";
+
 import { useNavigate } from "react-router-dom";
 
 export const Game = ({ game, setGame }) => {
@@ -13,37 +13,24 @@ export const Game = ({ game, setGame }) => {
   };
   return (
     <Container>
-      <NavContainer>
-        <BrandHeader src={BrandLogoImage} alt="mansion" />
-      </NavContainer>
       <Instructions />
-      <Characters navigateToCharacter={navigateToCharacter} />
+      <CharacterContainer>
+        <h1>Characters</h1>
+        <Characters navigateToCharacter={navigateToCharacter} />
+      </CharacterContainer>
     </Container>
   );
 };
-
-const BrandHeader = styled.img`
-  width: 300px;
-  border-radius: 16px;
-`;
-
-const NavContainer = styled.div`
+const CharacterContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
-  color: black;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 
 const Container = styled.div`
   min-height: 100vh;
   background-color: #ffffff;
-  padding: 20px;
 
   color: black;
   overflow: hidden;

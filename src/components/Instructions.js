@@ -1,16 +1,20 @@
 import styled from "@emotion/styled";
+import { SplitContainer, SplitLeft, SplitRight } from "./StyledComponents";
 
-export const Instructions = ({ preview }) => {
+export const Instructions = () => {
   return (
-    <Container>
-      <h2>Instructions for Game Lead</h2>
-      <p>
-        <strong>IMPORTANT</strong> As a game lead you will know all the
-        characters details and the mystery details. You will still get into
-        character, but you will not play in the mystery. You will be the game
-        host.
-      </p>
-      {!preview && (
+    <SplitContainer>
+      <SplitLeft style={{ backgroundColor: "black" }}>
+        <h1>Instructions for Game Lead</h1>
+        <strong>IMPORTANT</strong>
+        <ImportantText>
+          As a game lead you will know all the characters details and the
+          mystery details. You will still get into character, but you will not
+          parttake in solving the mystery. You will be the game host and already
+          know the answer.
+        </ImportantText>
+      </SplitLeft>
+      <SplitRight style={{ backgroundColor: "#ececec" }}>
         <div>
           <h3>YOUR JOB</h3>
           <h4>1. Share the character cards with each player. </h4>
@@ -18,19 +22,11 @@ export const Instructions = ({ preview }) => {
           <h4>3. Answer questions throughout the game for players</h4>
           <h4>4. Most importantly, get into character and enjoy yourself</h4>
         </div>
-      )}
-    </Container>
+      </SplitRight>
+    </SplitContainer>
   );
 };
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  margin: 20px;
-  width: 600px;
-  background-color: rgb(249, 249, 249);
-  border-radius: 16px;
-  padding: 20px;
+const ImportantText = styled.p`
+  font-size: 18px;
 `;
