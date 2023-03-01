@@ -9,6 +9,11 @@ import styled from "@emotion/styled";
 
 import { useNavigate } from "react-router-dom";
 import { Characters } from "./components/Characters";
+import {
+  SplitContainer,
+  SplitLeft,
+  SplitRight,
+} from "./components/StyledComponents";
 
 const heros = getHeros();
 
@@ -335,44 +340,44 @@ const BrandHeader = styled.img`
   border-radius: 16px;
 `;
 
-// make it flex if mobile
-const SplitContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+// // make it flex if mobile
+// const SplitContainer = styled.div`
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
 
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-`;
+//   @media (max-width: 768px) {
+//     display: flex;
+//     flex-direction: column;
+//     height: 100%;
+//   }
+// `;
 
-const SplitLeft = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 25px 75px;
-  color: white;
-  @media (max-width: 768px) {
-    align-items: center;
-    text-align: center;
-  }
-`;
+// const SplitLeft = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   padding: 25px 75px;
+//   color: white;
+//   @media (max-width: 768px) {
+//     align-items: center;
+//     text-align: center;
+//   }
+// `;
 
-const SplitRight = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 75px;
-  @media (max-width: 768px) {
-    align-items: center;
-    text-align: center;
-    padding: 25px;
-  }
-`;
+// const SplitRight = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 75px;
+//   @media (max-width: 768px) {
+//     align-items: center;
+//     text-align: center;
+//     padding: 25px;
+//   }
+// `;
 
 const SplitRightRow = styled.div`
   display: flex;
