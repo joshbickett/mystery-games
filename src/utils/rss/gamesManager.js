@@ -44,32 +44,32 @@ export const getHeros = () => {
 export const getCharacters = () => {
   return [
     {
-      name: "Professor Fate",
+      name: ["Professor Fate"],
       description: "The fortune teller",
       img: WesternCharacterTwo,
       id: "dfa66402-525b-4dd4-8246-0c7d5efcb3a9",
       shareable: [
-        "My fortune-telling powers allow me to answer 1 yes/no question from everyone here in town",
+        "Your fortune-telling powers allow your to answer 1 yes/no question from everyone here in town",
       ],
     },
     {
-      name: "Al Pacino",
+      name: ["Al Pacino", "Ally Pachino"],
       description: "Alpaca Farmer",
       img: WesternCharacterThree,
       id: "025ec643-f66d-407f-a78a-efd9a9f6a19f",
       shareable: [
-        "You are a former cattle rancher turned alpaca raiser",
-        "Several years ago you were able to retire early from cattle ranching after stumbling upon a gold nugget the size of a large potato while taking your horse to drink at the edge of a nearby river",
-        "Now you run an alpaca farm as a hobby and spin the finest alpaca wool in the West. You have donated your remaining fortunes to a horse rescue a few towns east",
-        "Today you are headed to the mercantile to deliver some wool. ",
+        "You are a former cattle rancher turned alpaca raiser.",
+        "Several years ago you were able to retire early from cattle ranching after stumbling upon a gold nugget the size of a large potato while taking your horse to drink at the edge of a nearby river.",
+        "Now you run an alpaca farm as a hobby and spin the finest alpaca wool in the West. You have donated your remaining fortunes to a horse rescue a few towns east.",
+        "You are headed to the mercantile to deliver some wool.",
       ],
       trust: [
-        "Lately, you’ve heard some commotion from your neighbors at Rusty Spur Ranch about Buck - something about him being a money pit",
-        "On your way into town, you saw a traveler in strange clothes appearing almost out of thin air near the woods",
+        "Lately, you’ve heard some rumors from your neighbors at Rusty Spur Ranch about their horse Bucky - something about him being a money pit.",
+        "On your way into town, you saw a traveler in strange clothes appearing almost out of thin air near the woods.",
       ],
     },
     {
-      name: "Bob 'bull' Rider",
+      name: ["Bob 'bull' Rider", "Barbara 'bull' Rider"],
       description: "Cattle Rancher at Rusty Spur Ranch",
       img: WesternCharacterFour,
       id: "b7a32869-0579-4c2f-8f35-220fd5ad340e",
@@ -86,7 +86,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: "Tex Ace",
+      name: ["Tex Ace"],
       description: "Cowboy",
       img: WesternCharacterFive,
       id: "cf65eadb-9879-4c4c-8884-82ec3669c560",
@@ -104,7 +104,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: "Silver Marshal",
+      name: ["Silver Marshal"],
       description: "New Guy at Rusty Spur Ranch",
       img: WesternCharacterFive,
       id: "cf65eadb-9879-4c4c-8884-82ec3669c560",
@@ -118,7 +118,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: "Ruth Winchester",
+      name: ["Ruth Winchester", "Rick Winchester"],
       description: "Owner of Winchester Mercantile ",
       img: WesternCharacterSix,
       id: "4f040247-2b21-4e62-bcac-6c1e17a89e36",
@@ -134,7 +134,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: "Rose Sagebrush",
+      name: ["Rose Sagebrush", "Roman Sagebrush"],
       description: "Reporter at Heart of the West Gazette",
       img: WesternCharacterSeven,
       id: "45aa3daa-8f19-4b35-907d-d1b60582621b",
@@ -150,7 +150,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: "Sheriff Jerry Hardlaw",
+      name: ["Sheriff Jerry Hardlaw", "Sheriff Jill Hardlaw"],
       description: "Local County Sheriff",
       img: WesternCharacterEight,
       id: "05290c63-678c-405c-9d3a-6d646b6d018a",
@@ -166,7 +166,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: "Wyatt Clockwise",
+      name: ["Wyatt Clockwise", "Wendy Clockwise"],
       description: "A mysterious traveler",
       img: WesternCharacterOne,
       id: "5c2b919b-6549-480d-b0ab-bb86f6fb2f0c",

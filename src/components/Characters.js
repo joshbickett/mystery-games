@@ -38,7 +38,7 @@ export const Characters = ({ preview, navigateToCharacter }) => {
             <CharacterImage src={character.img} alt={`char${index}`} />
             <InnerCharacterContainer>
               <h4 style={{ textAlign: "center", margin: 5 }}>
-                {character.name}
+                {character.name[0]}
               </h4>
               <p style={{ textAlign: "center", margin: 0 }}>
                 {character.description}

@@ -66,6 +66,7 @@ const InformationContainer = styled.div`
 const InformationHeader = styled.h5`
   margin: 0 5px;
   padding: 0;
+  line-height: 1.2;
 `;
 
 const BackButton = styled(ArrowBackIosIcon)`
@@ -146,14 +147,13 @@ const CharacterImg = styled.img`
 const SubText = styled.p`
   font-size: 14px;
   padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 0 5px 5px 5px;
 `;
 
 const Information = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
-  max-width: 500px;
+  max-width: 400px;
   background-color: #ececec;
   border-radius: 16px;
   padding: 20px;
