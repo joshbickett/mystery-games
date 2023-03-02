@@ -17,36 +17,42 @@ export const CharacterDetail = ({ character }) => {
       <InnerContainer>
         <OverviewContainer>
           <HeaderContainer>
-            <Header>{character.name}</Header>
-            <SubHeader>{character.description}</SubHeader>
+            <CharacterImg src={character.img} alt={character.name} />
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+            >
+              <Header>{character.name}</Header>
+              <SubHeader>{character.description}</SubHeader>
+            </div>
           </HeaderContainer>
-          <CharacterImg src={character.img} alt={character.name} />
+
+          <InformationContainer id="info-container">
+            {character.shareable && (
+              <Information>
+                <InformationHeader>Info you’re free to share</InformationHeader>
+
+                <div>
+                  {character.shareable.map((info, id) => {
+                    return <SubText key={id}>{info}</SubText>;
+                  })}
+                </div>
+              </Information>
+            )}
+
+            {character.trust && (
+              <Information>
+                <InformationHeader>
+                  Be careful with who you share this info with
+                </InformationHeader>
+                <div>
+                  {character?.trust?.map((info, id) => {
+                    return <SubText key={id}>{info}</SubText>;
+                  })}
+                </div>
+              </Information>
+            )}
+          </InformationContainer>
         </OverviewContainer>
-
-        <InformationContainer id="info-container">
-          {character.shareable && (
-            <Information>
-              <h5>Info you’re free to share</h5>
-
-              <div>
-                {character.shareable.map((info, id) => {
-                  return <SubText key={id}>{info}</SubText>;
-                })}
-              </div>
-            </Information>
-          )}
-
-          {character.trust && (
-            <Information>
-              <h5>Things to share with only those you trust</h5>
-              <div>
-                {character?.trust?.map((info, id) => {
-                  return <SubText key={id}>{info}</SubText>;
-                })}
-              </div>
-            </Information>
-          )}
-        </InformationContainer>
       </InnerContainer>
     </Container>
   );
@@ -56,10 +62,14 @@ const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  height: 100%;
+  justify-content: flex-start;
   margin: 20px;
   gap: 20px;
+`;
+
+const InformationHeader = styled.h5`
+  margin: 0 5px;
+  padding: 0;
 `;
 
 const BackButton = styled(ArrowBackIosIcon)`
@@ -74,10 +84,12 @@ const BackText = styled.div`
 
 // resize on hover
 const BackButtonContainer = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 20px;
   color: gray;
   display: flex;
-  align-items: center;
-  flex-direction: row;
+
   margin: 30px;
   cursor: pointer;
   user-select: none;
@@ -95,7 +107,6 @@ const InnerContainer = styled.div`
 
   background-color: #ffffff;
   color: black;
-  height: 600px;
 `;
 
 const OverviewContainer = styled.div`
@@ -106,7 +117,7 @@ const OverviewContainer = styled.div`
 
 const HeaderContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: 20px;
@@ -126,7 +137,7 @@ const SubHeader = styled.p`
 `;
 
 const CharacterImg = styled.img`
-  height: 500px;
+  height: 400px;
   border-radius: 16px;
   @media (max-width: 768px) {
     height: 300px;
@@ -135,6 +146,9 @@ const CharacterImg = styled.img`
 
 const SubText = styled.p`
   font-size: 14px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
 `;
 
 const Information = styled.div`
