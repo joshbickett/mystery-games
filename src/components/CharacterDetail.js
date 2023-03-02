@@ -17,13 +17,9 @@ export const CharacterDetail = ({ character }) => {
       <InnerContainer>
         <OverviewContainer>
           <HeaderContainer>
+            <Header>{character.name}</Header>
             <CharacterImg src={character.img} alt={character.name} />
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
-            >
-              <Header>{character.name}</Header>
-              <SubHeader>{character.description}</SubHeader>
-            </div>
+            <SubHeader>{character.description}</SubHeader>
           </HeaderContainer>
 
           <InformationContainer id="info-container">
@@ -93,6 +89,14 @@ const BackButtonContainer = styled.div`
   margin: 30px;
   cursor: pointer;
   user-select: none;
+  @media (max-width: 768px) {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
 `;
 
 const Container = styled.div`
@@ -117,23 +121,18 @@ const OverviewContainer = styled.div`
 
 const HeaderContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 20px;
   gap: 10px;
 `;
 
 const Header = styled.h1`
   font-size: 24px;
-  margin: 0;
-  padding: 0;
 `;
 
-const SubHeader = styled.p`
+const SubHeader = styled.h2`
   font-size: 18px;
-  margin: 0;
-  padding: 0;
 `;
 
 const CharacterImg = styled.img`
@@ -153,8 +152,8 @@ const SubText = styled.p`
 
 const Information = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  width: 500px;
+  grid-template-columns: 1fr 3fr;
+  max-width: 500px;
   background-color: #ececec;
   border-radius: 16px;
   padding: 20px;
