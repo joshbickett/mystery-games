@@ -61,7 +61,7 @@ export const getCharacters = () => {
         "You are a former cattle rancher turned alpaca raiser.",
         "Several years ago you were able to retire early from cattle ranching after stumbling upon a gold nugget the size of a large potato while taking your horse to drink at the edge of a nearby river.",
         "Now you run an alpaca farm as a hobby and spin the finest alpaca wool in the West. You have donated your remaining fortunes to a horse rescue a few towns east.",
-        "You are headed to the mercantile to deliver some wool.",
+        "You are headed to the Winchester Mercantile to deliver some wool.",
       ],
       trust: [
         "Lately, you’ve heard some rumors from your neighbors at Rusty Spur Ranch about their horse Bucky - something about him being a money pit.",
@@ -74,15 +74,15 @@ export const getCharacters = () => {
       img: WesternCharacterFour,
       id: "b7a32869-0579-4c2f-8f35-220fd5ad340e",
       shareable: [
-        "You’re the most lucrative rancher in the region, and you believe the town is only as prosperous as it is because of your efforts",
-        "The success of your ranch - and maybe even this whole town - relies on your prized stallion named, Buck",
-        "You headed to the local mercantile to gather some supplies with your righthand man on the ranch, _ S",
-        "You’re debating if it was wise to leave the new cowboy, Xan, alone to watch over the ranch…oh well!",
+        "You’re the most lucrative rancher in the region, and you believe the town is only as prosperous as it is because of your efforts.",
+        "The success of your ranch - and maybe even this whole town - relies on your stallions such as your prized horse, Bucky.",
+        "You headed to the local Winchester Mercantile to gather some supplies with your righthand man on the ranch, Tex Ace",
+        "You’re debating if it was wise to leave the new cowboy, Silver Marshal, alone to watch over the ranch…oh well!",
       ],
       trust: [
-        "Your once prized stallion, Buck, is draining resources and jeopardizing your business",
-        "You don’t have the heart to replace Buck even though cowboy _ insists it’s the right thing to do for the business",
-        "You’re also hoping you’ll run into the fortune teller passing through, Udara, for some advice  ",
+        "Your once prized stallion, Bucky, is draining resources and jeopardizing your business",
+        "You don’t have the heart to replace Bucky even though cowboy Tex Ace insists it’s the right thing to do for the business",
+        "You’re also hoping you’ll run into the fortune teller passing through, Professor Fate, for some advice.",
       ],
     },
     {
@@ -91,10 +91,11 @@ export const getCharacters = () => {
       img: WesternCharacterFive,
       id: "cf65eadb-9879-4c4c-8884-82ec3669c560",
       shareable: [
-        "You are the righthand man at Rusty Spur Ranch and make sure everything runs smooth",
-        "You have noticed your neighbor, _ the Alpaca Farmer, has been snooping around",
-        "You are training the new cowboy, _, and left him in charge while you and Rancher Rusty Spur pick up supplies at the Mitchell Mercantile today",
+        "You are the righthand man at Rusty Spur Ranch and make sure everything runs smooth.",
+        "You have noticed your neighbor, Al Pacino the Alpaca Farmer, has been snooping around",
+        "You are training the new cowboy, Silver Marshal, and left him in charge while you and Rancher Rusty Spur pick up supplies at the Winchester Mercantile today",
       ],
+      antagonist: true,
       trust: [
         "!!!DON’T TELL ANYONE!!! You’ve done it- don’t get caught",
         "Who: You stole, Buck, the once prized stallion from Rusty Spur Ranch",
@@ -177,7 +178,7 @@ export const getCharacters = () => {
       ],
       trust: [
         "You’ve been exchanging anonymous telegrams asking you to rescue a very special horse and they drove a hard bargain demanding top dollar - you were able to make it work thanks for the hefty donation",
-        "Today is the day you are meeting this strange telegram author and in the meantime, you stocked up on apples, carrots, and hay at the local mercantile",
+        "Today is the day you are meeting this strange telegram author and in the meantime, you stocked up on apples, carrots, and hay at the local Winchester Mercantile",
       ],
     },
   ];

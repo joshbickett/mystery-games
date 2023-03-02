@@ -17,8 +17,8 @@ export const CharacterDetail = ({ character }) => {
       <InnerContainer>
         <OverviewContainer>
           <HeaderContainer>
-            <Header>{character.name}</Header>
-            <CharacterImg src={character.img} alt={character.name} />
+            <Header>{character.name[0]}</Header>
+            <CharacterImg src={character.img} alt={character.name[0]} />
             <SubHeader>{character.description}</SubHeader>
           </HeaderContainer>
 
