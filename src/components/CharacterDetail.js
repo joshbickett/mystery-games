@@ -7,6 +7,7 @@ export const CharacterDetail = ({ character }) => {
   const goBack = () => {
     navigate("/game");
   };
+
   return (
     <Container>
       <BackButtonContainer onClick={goBack}>
@@ -17,7 +18,17 @@ export const CharacterDetail = ({ character }) => {
       <InnerContainer>
         <OverviewContainer>
           <HeaderContainer>
+            <h4 style={{ margin: 0, padding: 0 }}>Your Character</h4>
             <Header>{character.name[0]}</Header>
+            {character?.antagonist ? (
+              <CharacterGuiltDetail style={{ color: "#814141" }}>
+                Villian
+              </CharacterGuiltDetail>
+            ) : (
+              <CharacterGuiltDetail style={{ color: "#00008B" }}>
+                Innocent
+              </CharacterGuiltDetail>
+            )}
             <CharacterImg src={character.img} alt={character.name[0]} />
             <SubHeader>{character.description}</SubHeader>
           </HeaderContainer>
@@ -37,9 +48,16 @@ export const CharacterDetail = ({ character }) => {
 
             {character.trust && (
               <Information>
-                <InformationHeader>
-                  Be careful with who you share this info with
-                </InformationHeader>
+                {character?.antagonist ? (
+                  <InformationHeader style={{ color: "#814141" }}>
+                    DON'T TELL ANYONE
+                  </InformationHeader>
+                ) : (
+                  <InformationHeader>
+                    Be careful with who you share this info with
+                  </InformationHeader>
+                )}
+
                 <div>
                   {character?.trust?.map((info, id) => {
                     return <SubText key={id}>{info}</SubText>;
@@ -53,6 +71,13 @@ export const CharacterDetail = ({ character }) => {
     </Container>
   );
 };
+
+const CharacterGuiltDetail = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 const InformationContainer = styled.div`
   display: flex;
@@ -125,11 +150,14 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  margin: 20px;
+  gap: 5px;
 `;
 
 const Header = styled.h1`
   font-size: 24px;
+  margin: 0;
+  padding: 0;
 `;
 
 const SubHeader = styled.h2`
