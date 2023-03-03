@@ -75,14 +75,12 @@ export const getCharacters = () => {
       id: "b7a32869-0579-4c2f-8f35-220fd5ad340e",
       shareable: [
         "You’re the most lucrative rancher in the region, and you believe the town is only as prosperous as it is because of your efforts.",
-        "The success of your ranch - and maybe even this whole town - relies on your stallions such as your prized horse, Bucky.",
-        "You headed to the local Winchester Mercantile to gather some supplies with your righthand man on the ranch, Tex Ace",
+        "Much of the prestige of your ranch comes from your prized stallion, Bucky.",
+        "You headed to the local Winchester Mercantile to gather some supplies with your righthand man on the ranch, Tex Ace.",
         "You’re debating if it was wise to leave the new cowboy, Silver Marshal, alone to watch over the ranch…oh well!",
       ],
       trust: [
-        "Your once prized stallion, Bucky, is draining resources and jeopardizing your business",
-        "You don’t have the heart to replace Bucky even though cowboy Tex Ace insists it’s the right thing to do for the business",
-        "You’re also hoping you’ll run into the fortune teller passing through, Professor Fate, for some advice.",
+        "You and Tex Ace have been at odds lately. You believed in a more hands-on approach, wanting to keep a close eye on the cattle. However, Tex was more of a free spirit, preferring to let the cattle roam and trusting in their instincts",
       ],
     },
     {
@@ -91,17 +89,18 @@ export const getCharacters = () => {
       img: WesternCharacterFive,
       id: "cf65eadb-9879-4c4c-8884-82ec3669c560",
       shareable: [
-        "You are the righthand man at Rusty Spur Ranch and make sure everything runs smooth.",
-        "You have noticed your neighbor, Al Pacino the Alpaca Farmer, has been snooping around",
-        "You are training the new cowboy, Silver Marshal, and left him in charge while you and Rancher Rusty Spur pick up supplies at the Winchester Mercantile today",
+        "You are the righthand man at Rusty Spur Ranch",
+        "You have noticed your neighbor, Al Pacino the Alpaca Farmer, has been snooping around.",
+        "You are training the new cowboy, Silver Marshal, and you left him in charge while you and Rancher Rusty Spur pick up supplies at the Winchester Mercantile today.",
       ],
       antagonist: true,
       trust: [
         "You’ve done it, don’t get caught!!!",
-        "Who => You stole, Bucky, the once prized stallion from Rusty Spur Ranch",
-        "Why =>  Money! Buck is no longer in his prime. He’s draining resources and jeopardizing the ranch and your job, but his sale could set you up well to start over in another town. ",
-        "How => You made a deal with a horse rescue a few towns east to buy Buck for a pretty penny. You received a telegram that the horse rescue is on its way. You used horse tranquilizer, Xylazine, to put Buck to sleep and make the sale later today.",
+        "Who => You stole, Bucky, the once prized stallion from Rusty Spur Ranch.",
+        "Why => Money! Bucky's sale could set you up well to start over in another town. ",
+        "How => You made a deal with a horse acquirer a few towns east to buy Buck for a pretty penny. You received a telegram that the horse rescue is on its way. You used horse tranquilizer, Xylazine, to put Bucky to sleep and make the sale later today.",
         "You are hoping to pin the horse disappearance on other suspicious townsfolk. ",
+        "You and Bob 'bull' Rider have been at odds lately. You believed in a free spirit approach, by letting the cattle roam and trusting in their instincts while Bob wants to keep a close eye on the cattle",
       ],
     },
     {
@@ -111,11 +110,28 @@ export const getCharacters = () => {
       id: "cf65eadb-9879-4c4c-8884-82ec3669c560",
       shareable: [
         "You’re the new guy at Rusty Spur Ranch",
-        "Cowboy _ has been training you, but all he’s been doing lately is complaining about one of the horses, Buck",
-        "You were incharge of the ranch this morning while Rancher Rusty Spur and Cowboy _ went into town ",
-        "Things to share with only those you trust",
-        "You noticed your neighbor, _ the Alpaca Farmer, has been snooping around",
-        "You ran to the mercantile so fast that you must have dropped your keys to the ranch somewhere",
+        "Cowboy Tex Ace has been training you. He’s complaining lately Bob 'bull' Rider stick approach of keeping a close eye on cattle and prefers to let the cattle roam and trust in their instincts.",
+        "You were incharge of the ranch this morning while Rancher Rusty Spur and Cowboy Tex Ace went into town ",
+      ],
+      trust: [
+        "You noticed your neighbor, Al Pacino the Alpaca Farmer, has been snooping around",
+        "When Bucky went missing, you ran to the mercantile so fast that you must have dropped your keys to the ranch somewhere",
+      ],
+    },
+    {
+      name: ["Wyatt Clockwise", "Wendy Clockwise"],
+      description: "A mysterious traveler",
+      img: WesternCharacterOne,
+      id: "5c2b919b-6549-480d-b0ab-bb86f6fb2f0c",
+      shareable: [
+        "You’re a traveler looking for a job.",
+        "After a hefty donation to the horse rescue from  a local Alpaca Farm, you are able to purchase horses for rescue",
+        "Telegram delivery boy, Leo, has been visiting you quite a bit",
+      ],
+      trust: [
+        "You traveled to 1875 because your great great great grandmother __ was jailed in 1875. Based on evidence you’ve been collecting in your time travels, you are sure she is innocent. You came to prove her innocence but you are having second thoughts - what if this alters the future too much?! What if you’re never born?!",
+        "You’re not sure you want anyone to know you are from the future for it could disrupt the space time continuum…. So you’re trying to blend in with the townspeople and find a job because you’re not sure how long you’ll be stuck here",
+        "But first thing first - your time machine is powered by potatoes so you are headed to the mercantile to stock up on potatoes to refuel.",
       ],
     },
     {
@@ -125,13 +141,10 @@ export const getCharacters = () => {
       id: "4f040247-2b21-4e62-bcac-6c1e17a89e36",
       shareable: [
         "You own the local mercantile and business is booming as the town is growing quickly",
-        "Your boy _, is just old enough to help around and today he will help you harvest potatoes from your field ",
       ],
       trust: [
-        "You’ve had some strange special orders lately especially from…_ ",
-        "Udara, the fortune teller, who buys herbs and spices from around the world ",
-        "_, ranch boss at Rusty Spur Ranch, who has been in more than usual though you can’t recall what he bought last ",
-        "Lisa, a passerby that bought the last of your apples, carrots, and hay",
+        "You’ve had some strange special orders lately especially from… Tex Ace, the cowboy at Rusty Spur Ranch who typically just buys a lot of hay and carrots",
+        "Bob 'bull' Rider, ranch boss at Rusty Spur Ranch, who has been in more than usual though you can’t recall what he bought last ",
       ],
     },
     {
@@ -140,7 +153,7 @@ export const getCharacters = () => {
       img: WesternCharacterSeven,
       id: "45aa3daa-8f19-4b35-907d-d1b60582621b",
       shareable: [
-        "You are a writer for the Lexi’s Local, the town newspaper ",
+        "You are a Reporter at Heart of the West Gazette, the town newspaper ",
         "With the town growing, and with it, more tales to tell, you’re looking to hire a photographer ",
         "You clearly need the help - you have misplaced your journal that contains very important notes and story ideas",
         "Today you are heading to the mercantile to buy a new journal and hope you run into some of the travelers to conduct some interviews for the paper",
@@ -148,6 +161,7 @@ export const getCharacters = () => {
       trust: [
         "You are writing a juicy tale to expose something fishy going on at Rusty Spur Ranch. ",
         "You were able to intercept a telegram from Rusty Spur Ranch, so you snuck into the barn at Rusty Spur Ranch in the wee hours of the morning to investigate. When you got there you didn’t see the prized horse you were hoping to photograph, so you’ll have to come back another time.",
+        "You noticed a bright light near the Rusty Spur Ranch a few days ago and saw the traveler, Wyatt Clockwise snooping around in the dark near there. ",
       ],
     },
     {
@@ -155,6 +169,7 @@ export const getCharacters = () => {
       description: "Local County Sheriff",
       img: WesternCharacterEight,
       id: "05290c63-678c-405c-9d3a-6d646b6d018a",
+      optional: true,
       shareable: [
         "You are the new sheriff in town and it’s important to you to keep the peace, especially with curious passersby and newcomers to town like:",
         "One who seemed to almost appear out of thin air in the woods",
@@ -164,21 +179,6 @@ export const getCharacters = () => {
       ],
       trust: [
         "You’re keeping your eyes peeled today because you saw someone sneaking around the potato fields  ",
-      ],
-    },
-    {
-      name: ["Wyatt Clockwise", "Wendy Clockwise"],
-      description: "A mysterious traveler",
-      img: WesternCharacterOne,
-      id: "5c2b919b-6549-480d-b0ab-bb86f6fb2f0c",
-      shareable: [
-        "You travel around the west rescuing horses that are injured or aged out of ranches ",
-        "After a hefty donation to the horse rescue from  a local Alpaca Farm, you are able to purchase horses for rescue",
-        "Telegram delivery boy, Leo, has been visiting you quite a bit",
-      ],
-      trust: [
-        "You’ve been exchanging anonymous telegrams asking you to rescue a very special horse and they drove a hard bargain demanding top dollar - you were able to make it work thanks for the hefty donation",
-        "Today is the day you are meeting this strange telegram author and in the meantime, you stocked up on apples, carrots, and hay at the local Winchester Mercantile",
       ],
     },
   ];

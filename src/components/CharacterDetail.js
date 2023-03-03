@@ -84,7 +84,7 @@ const InformationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: 20px;
+  margin-bottom: 10px;
   gap: 20px;
 `;
 
@@ -150,7 +150,7 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin-top: 20px;
   gap: 5px;
 `;
 
