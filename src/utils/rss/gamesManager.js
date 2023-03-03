@@ -98,7 +98,7 @@ export const getCharacters = () => {
         "You’ve done it, don’t get caught!!!",
         "Who => You stole, Bucky, the once prized stallion from Rusty Spur Ranch.",
         "Why => Money! Bucky's sale could set you up well to start over in another town. ",
-        "How => You made a deal with a horse acquirer a few towns east to buy Buck for a pretty penny. You received a telegram that the horse rescue is on its way. You used horse tranquilizer, Xylazine, to put Bucky to sleep and make the sale later today.",
+        "How => You made a deal with a horse acquirer a few towns east to buy Buck for a pretty penny. You received a telegram that the horse rescue is on its way. You used home made horse tranquilizer, to put Bucky to sleep and make the sale later today.",
         "You are hoping to pin the horse disappearance on other suspicious townsfolk. ",
         "You and Bob 'bull' Rider have been at odds lately. You believed in a free spirit approach, by letting the cattle roam and trusting in their instincts while Bob wants to keep a close eye on the cattle",
       ],
@@ -129,7 +129,7 @@ export const getCharacters = () => {
         "Telegram delivery boy, Leo, has been visiting you quite a bit",
       ],
       trust: [
-        "You traveled to 1875 because your great great great grandmother __ was jailed in 1875. Based on evidence you’ve been collecting in your time travels, you are sure she is innocent. You came to prove her innocence but you are having second thoughts - what if this alters the future too much?! What if you’re never born?!",
+        "You traveled to 1875 because your great great great grandmother Rose Sagebrush was jailed in 1875. Based on evidence you’ve been collecting in your time travels, you are sure she is innocent. You came to prove her innocence but you are having second thoughts - what if this alters the future too much?! What if you’re never born?!",
         "You’re not sure you want anyone to know you are from the future for it could disrupt the space time continuum…. So you’re trying to blend in with the townspeople and find a job because you’re not sure how long you’ll be stuck here",
         "But first thing first - your time machine is powered by potatoes so you are headed to the mercantile to stock up on potatoes to refuel.",
       ],
@@ -143,8 +143,9 @@ export const getCharacters = () => {
         "You own the local mercantile and business is booming as the town is growing quickly",
       ],
       trust: [
-        "You’ve had some strange special orders lately especially from… Tex Ace, the cowboy at Rusty Spur Ranch who typically just buys a lot of hay and carrots",
-        "Bob 'bull' Rider, ranch boss at Rusty Spur Ranch, who has been in more than usual though you can’t recall what he bought last ",
+        "You’ve been getting some strange special orders lately especially from… many visitors",
+        "Wyatt Clockwise, a mysterious traveler who has been buying a lot of potatoes, more than anyone should ever need. Now you are out of potatoes. ",
+        "Tex Ace, the cowboy at Rusty Spur Ranch who typically normally buys a lot of hay and carrots, but he's been buying some odd things lately.",
       ],
     },
     {
@@ -154,14 +155,13 @@ export const getCharacters = () => {
       id: "45aa3daa-8f19-4b35-907d-d1b60582621b",
       shareable: [
         "You are a Reporter at Heart of the West Gazette, the town newspaper ",
-        "With the town growing, and with it, more tales to tell, you’re looking to hire a photographer ",
         "You clearly need the help - you have misplaced your journal that contains very important notes and story ideas",
-        "Today you are heading to the mercantile to buy a new journal and hope you run into some of the travelers to conduct some interviews for the paper",
+        "Today you are heading to the Winchester Mercantile to buy a new journal and hope you run into some of the travelers to conduct some interviews for the paper",
       ],
       trust: [
         "You are writing a juicy tale to expose something fishy going on at Rusty Spur Ranch. ",
-        "You were able to intercept a telegram from Rusty Spur Ranch, so you snuck into the barn at Rusty Spur Ranch in the wee hours of the morning to investigate. When you got there you didn’t see the prized horse you were hoping to photograph, so you’ll have to come back another time.",
-        "You noticed a bright light near the Rusty Spur Ranch a few days ago and saw the traveler, Wyatt Clockwise snooping around in the dark near there. ",
+        "You were able to intercept a telegram from Rusty Spur Ranch, so you snuck into the barn at ranch in the wee hours of the morning to investigate. When you got there you didn’t see the prized horse you were hoping to photograph, so you’ll have to come back another time.",
+        "While sneeking around you noticed a bright light near the Rusty Spur Ranch a few days ago and saw the traveler, Wyatt Clockwise also snooping around in the dark near there. ",
       ],
     },
     {
@@ -173,12 +173,11 @@ export const getCharacters = () => {
       shareable: [
         "You are the new sheriff in town and it’s important to you to keep the peace, especially with curious passersby and newcomers to town like:",
         "One who seemed to almost appear out of thin air in the woods",
-        "One who looks to be lost, but has picked up quite a lot of supplies at the local mercantile",
         "One who claims to be a fortune teller",
-        "You usually chat with Lexi, who writes the Lexi’s Local town newspaper, to compare notes on what is going on in town ",
+        "You usually chat with Rose Sagebrush, who writes the Rose Sagebrush local town newspaper, to compare notes on what is going on in town.",
       ],
       trust: [
-        "You’re keeping your eyes peeled today because you saw someone sneaking around the potato fields  ",
+        "You’re keeping your eyes peeled today because you saw someone sneaking around the potato fields.",
       ],
     },
   ];
