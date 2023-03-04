@@ -69,16 +69,10 @@ export const LandingDetail = () => {
           }}
         >
           <CSSTransition in={!isFlipped} timeout={300} classNames="flip">
-            <img
+            <MainCardImage
               src={heroGame.img}
               alt="enter"
               onClick={navigateToPayment}
-              style={{
-                width: "150px",
-                maxHeight: "225px",
-                borderRadius: "6px",
-                flex: "1",
-              }}
             />
           </CSSTransition>
           <h3
@@ -222,6 +216,16 @@ export const LandingDetail = () => {
     </Container>
   );
 };
+
+const MainCardImage = styled.img`
+  width: 150px;
+  height: 225px;
+  border-radius: 6px;
+  flex: 1;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
 
 const DoorImage = styled.img`
   width: 250px;
