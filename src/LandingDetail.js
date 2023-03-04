@@ -50,7 +50,7 @@ export const LandingDetail = () => {
       <NavContainer>
         <BrandHeader src={BrandLogoImage} alt="mansion" />
       </NavContainer>
-      <Separator />
+
       <SplitContainer>
         <SplitLeft style={{ backgroundColor: "black" }}>
           <h3 style={{ fontSize: "25px", margin: 0, marginBottom: 15 }}>
@@ -62,7 +62,8 @@ export const LandingDetail = () => {
         </SplitLeft>
         <SplitRight
           style={{
-            backgroundColor: "#ffffff",
+            backgroundColor: "black",
+            color: "white",
             padding: 20,
             minHeight: "300px",
           }}
@@ -99,7 +100,7 @@ export const LandingDetail = () => {
           </p>
         </SplitRight>
       </SplitContainer>
-      <Separator />
+
       <FlexContainer style={{ padding: 10 }}>
         <h1 style={{ margin: 0, margin: 10, textAlign: "center" }}>
           Meet the players
@@ -107,11 +108,10 @@ export const LandingDetail = () => {
       </FlexContainer>
       <Characters preview={true} />
 
-      <Separator />
       <SplitContainer style={{ gridTemplateColumns: "1fr 2fr" }}>
         <SplitLeft
           style={{
-            backgroundColor: "#ffffff",
+            backgroundColor: "rgb(236, 236, 236)",
             color: "black",
             padding: "20px 40px",
           }}
@@ -316,7 +316,8 @@ const NavContainer = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: rgb(249, 249, 249);
+
   color: black;
   @media (max-width: 768px) {
     flex-direction: column;
