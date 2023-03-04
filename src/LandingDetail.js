@@ -112,8 +112,9 @@ export const LandingDetail = () => {
         >
           <h1 style={{ padding: 0, margin: "10px 0" }}>What is it?</h1>
           <p style={{ margin: "10px 0", lineHeight: "25px" }}>
-            Mystery games are role-playing games where players evaluate the
-            other players and clues to solve a mystery.
+            Mystery games are role-playing games where there is a mystery to be
+            solved. There is a villain in the group and the players have to
+            figure out who it is.
           </p>
           <p style={{ margin: "10px 0", lineHeight: "25px" }}>
             It is kind of like a Murder Mystery Game, but with only the mystery
@@ -130,9 +131,7 @@ export const LandingDetail = () => {
 
           <div style={{ padding: "15px" }}>
             <DescriptionContainer>
-              <DescriptionHeader>
-                Find 8 friends or family members to play
-              </DescriptionHeader>
+              <DescriptionHeader>Find 8 friends to play</DescriptionHeader>
               <DescriptionSubText>
                 Each get a role with a strategy to win
               </DescriptionSubText>
@@ -171,11 +170,9 @@ export const LandingDetail = () => {
           style={{
             backgroundColor: "black",
             color: "white",
-            padding: 0,
+            paddingBottom: 0,
           }}
         >
-          <h2>Try it!</h2>
-
           <CallToActionButton onClick={navigateToPayment}>
             GET THE GAME
           </CallToActionButton>
@@ -194,10 +191,9 @@ export const LandingDetail = () => {
           <h2 onClick={navigateToPayment} style={{ textAlign: "center" }}>
             {heros[0].name}
           </h2>
-          <img
+          <LastCatchImage
             src={CityImg}
             alt="mansion"
-            style={{ width: 300, borderRadius: "8px" }}
             onClick={navigateToPayment}
           />
         </SplitLeft>
@@ -224,6 +220,14 @@ const MainCardImage = styled.img`
   flex: 1;
   &:hover {
     transform: scale(1.1);
+  }
+`;
+
+const LastCatchImage = styled.img`
+  width: 300px;
+  border-radius: 8px;
+  &:hover {
+    transform: scale(1.05);
   }
 `;
 
