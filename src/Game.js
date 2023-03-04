@@ -32,6 +32,7 @@ const CharacterContainer = styled.div`
 
 const Container = styled.div`
   min-height: 100vh;
+  width: 100%;
   background-color: #ffffff;
 
   color: black;

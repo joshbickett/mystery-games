@@ -3,32 +3,27 @@ import { SplitContainer, SplitLeft, SplitRight } from "./StyledComponents";
 
 export const Instructions = () => {
   return (
-    <SplitContainer>
-      <SplitLeft style={{ backgroundColor: "black" }}>
-        <h1>Instructions for Game Lead</h1>
+    <div style={{ width: "100%" }}>
+      <RowContainer>
+        <h1 style={{ margin: 0, padding: 0, marginBottom: 20 }}>
+          Instructions for Game Lead
+        </h1>
         <strong>IMPORTANT</strong>
-        <ImportantText>
+        <p>
           As a game lead you will know all the characters details and the
           mystery details. You will still get into character, but you will not
           parttake in solving the mystery. You will be the game host and already
           know the answer.
-        </ImportantText>
-      </SplitLeft>
-      <SplitRight
-        style={{
-          backgroundColor: "#ececec",
-          padding: 30,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <div>
-          <InstructionSubHeader>What you'll need</InstructionSubHeader>
-          <InstructionText>9 Players including yourself</InstructionText>
-          <InstructionText>A printer</InstructionText>
-          <InstructionText>To read the instructions</InstructionText>
-        </div>
-        <div>
+        </p>
+      </RowContainer>
+      <SplitContainer style={{ gridTemplateColumns: "1fr 1fr" }}>
+        <SplitLeft
+          style={{
+            backgroundColor: "rgb(236, 236, 236)",
+            color: "black",
+            padding: "20px 40px",
+          }}
+        >
           <InstructionSubHeader>Your job</InstructionSubHeader>
           <InstructionText>
             <strong>1.</strong> Share a character cards with each player
@@ -44,9 +39,15 @@ export const Instructions = () => {
             <strong>4.</strong> Most importantly, get into character and enjoy
             yourself
           </InstructionText>
-        </div>
-      </SplitRight>
-    </SplitContainer>
+        </SplitLeft>
+        <SplitRight>
+          <h1 style={{ padding: 0, margin: "10px 0" }}>What you'll need</h1>
+          <p style={{ margin: "10px" }}>7 - 9 Players including yourself</p>
+          <p style={{ margin: "10px" }}>A printer</p>
+          <p style={{ margin: "10px" }}>Just read the instructions</p>
+        </SplitRight>
+      </SplitContainer>
+    </div>
   );
 };
 
@@ -64,6 +65,11 @@ const InstructionText = styled.p`
   text-align: center;
 `;
 
-const ImportantText = styled.p`
-  font-size: 18px;
+const RowContainer = styled.div`
+  background-color: black;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
 `;
