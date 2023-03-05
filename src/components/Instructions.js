@@ -16,12 +16,12 @@ export const Instructions = () => {
           know the answer.
         </p>
       </RowContainer>
-      <SplitContainer style={{ gridTemplateColumns: "1fr 1fr" }}>
+      <SplitContainer>
         <SplitLeft
           style={{
-            backgroundColor: "rgb(236, 236, 236)",
             color: "black",
             padding: "20px 40px",
+            backgroundColor: "rgb(249, 249, 249)",
           }}
         >
           <InstructionSubHeader>Your job</InstructionSubHeader>
@@ -40,7 +40,7 @@ export const Instructions = () => {
             yourself
           </InstructionText>
         </SplitLeft>
-        <SplitRight>
+        <SplitRight style={{ backgroundColor: "rgb(236, 236, 236)" }}>
           <h1 style={{ padding: 0, margin: "10px 0" }}>What you'll need</h1>
           <p style={{ margin: "10px" }}>7 - 9 Players including yourself</p>
           <p style={{ margin: "10px" }}>A printer</p>
