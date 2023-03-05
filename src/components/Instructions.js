@@ -16,7 +16,7 @@ export const Instructions = () => {
           know the answer.
         </p>
       </RowContainer>
-      <SplitContainer>
+      <SplitContainer style={{ gridTemplateColumns: "2fr 1fr" }}>
         <SplitLeft
           style={{
             color: "black",
@@ -24,19 +24,37 @@ export const Instructions = () => {
             backgroundColor: "rgb(249, 249, 249)",
           }}
         >
-          <InstructionSubHeader>Your job</InstructionSubHeader>
+          <h1 style={{ margin: 0, padding: 0 }}>Your job</h1>
           <InstructionText>
-            <strong>1.</strong> Share a character cards with each player
+            <strong>1.</strong> Choose a physical location to host the Mystery
+            Game at
+          </InstructionText>
+
+          <InstructionText>
+            <strong>2.</strong> Share a character cards with each player
+          </InstructionText>
+          <InstructionSubText>
+            Each card has a "Share" button, click this button and share the URL
+            / Link by text message or email. Each character card also includes
+            the instructions for the players about how to play and win.
+          </InstructionSubText>
+          <InstructionText>
+            <strong>3.</strong> Print off the props and place them around the
+            location of the game.
           </InstructionText>
           <InstructionText>
-            <strong>2.</strong> Print off the props and place them around the
-            house
+            <strong>4.</strong> Before the game starts check with the group if
+            anyone has questions about how to play and win.
           </InstructionText>
           <InstructionText>
-            <strong>3.</strong> Answer questions throughout the game for players
+            <strong>5.</strong> Start the game!
           </InstructionText>
           <InstructionText>
-            <strong>4.</strong> Most importantly, get into character and enjoy
+            <strong>6.</strong> As the fortune teller, may answer one yes / or
+            question throughout the game to help the players.
+          </InstructionText>
+          <InstructionText>
+            <strong>7.</strong> Most importantly, get into character and enjoy
             yourself
           </InstructionText>
         </SplitLeft>
@@ -51,18 +69,14 @@ export const Instructions = () => {
   );
 };
 
-// underlined text
-const InstructionSubHeader = styled.h3`
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
-  text-decoration: underline;
-  text-align: center;
-`;
-
 const InstructionText = styled.p`
   font-size: 18px;
-  text-align: center;
+`;
+const InstructionSubText = styled.p`
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
 `;
 
 const RowContainer = styled.div`
