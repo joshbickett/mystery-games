@@ -29,9 +29,18 @@ export const Instructions = () => {
             <strong>1.</strong> Choose a physical location to host the Mystery
             Game at
           </InstructionText>
+          <InstructionText>
+            <strong>2.</strong> Decide how many players are joining
+          </InstructionText>
+          <InstructionSubText>
+            The game is setup to allow for between 7-9 players. You will notice
+            two characters below, _ and _, are optional, if you are playing with
+            fewer characters you may leave those players out and not send those
+            characters to anyone.
+          </InstructionSubText>
 
           <InstructionText>
-            <strong>2.</strong> Share a character cards with each player
+            <strong>3.</strong> Share a character cards with each player
           </InstructionText>
           <InstructionSubText>
             Each card has a "Share" button, click this button and share the URL
@@ -39,24 +48,53 @@ export const Instructions = () => {
             the instructions for the players about how to play and win.
           </InstructionSubText>
           <InstructionText>
-            <strong>3.</strong> Print off the props and place them around the
+            <strong>4.</strong> Print off the props and place them around the
             location of the game.
           </InstructionText>
+          <InstructionSubText>
+            The game props can be found at the bottom of this page. Once you
+            print them off, you can place them around the game location. Feel
+            free to get creative. Also if you'd like to get live props instead
+            of print offs, that is a welcomed and fun idea as well.
+          </InstructionSubText>
           <InstructionText>
-            <strong>4.</strong> Before the game starts check with the group if
+            <strong>5.</strong> Before the game starts check with the group if
             anyone has questions about how to play and win.
           </InstructionText>
+          <InstructionSubText>
+            In the character cards you sent each player there is instructions on
+            how to win, but it is a good idea to check with the group if there
+            are questions. If the villian (Tex Ace) has questions, you'll want
+            to be sure to answer those separately to not give away any clues to
+            other players.
+          </InstructionSubText>
           <InstructionText>
-            <strong>5.</strong> Start the game!
+            <strong>6.</strong> Start the game!
           </InstructionText>
+          <InstructionSubText>
+            We recommend the game is played over a 2 hour period, but you may
+            adjust it to be shorter or longer depending on the group.
+          </InstructionSubText>
           <InstructionText>
-            <strong>6.</strong> As the fortune teller, may answer one yes / or
+            <strong>7.</strong> As the fortune teller, may answer one yes / or
             question throughout the game to help the players.
           </InstructionText>
+          <InstructionSubText>
+            Each player may ask you *one* yes or no question. If you prefer you
+            can leave this part of the game out, but it adds a fun twist and
+            allows you to help if the players are struggling to find the
+            villian, motive, and method.
+          </InstructionSubText>
           <InstructionText>
-            <strong>7.</strong> Most importantly, get into character and enjoy
+            <strong>8.</strong> Most importantly, get into character and enjoy
             yourself
           </InstructionText>
+          <InstructionSubText>
+            Though you are the game host, you are also a character in the game
+            and you should have fun! We think the host character is just a fun
+            because you get to observer the players and see how they interact
+            with each other and the game props.
+          </InstructionSubText>
         </SplitLeft>
         <SplitRight style={{ backgroundColor: "rgb(236, 236, 236)" }}>
           <h1 style={{ padding: 0, margin: "10px 0" }}>What you'll need</h1>
