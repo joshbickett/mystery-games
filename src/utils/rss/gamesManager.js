@@ -69,7 +69,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: ["Bob 'bull' Rider", "Barbara 'bull' Rider"],
+      name: ["Bobbie 'bull' Rider"],
       description: "Cattle Rancher at Rusty Spur Ranch",
       img: WesternCharacterFour,
       id: "b7a32869-0579-4c2f-8f35-220fd5ad340e",
@@ -119,7 +119,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: ["Wyatt Clockwise", "Wendy Clockwise"],
+      name: ["Wylie Clockwise"],
       description: "A mysterious traveler",
       img: WesternCharacterOne,
       id: "5c2b919b-6549-480d-b0ab-bb86f6fb2f0c",
@@ -135,7 +135,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: ["Ruth Winchester", "Rick Winchester"],
+      name: ["R. Winchester"],
       description: "Owner of Winchester Mercantile ",
       img: WesternCharacterSix,
       id: "4f040247-2b21-4e62-bcac-6c1e17a89e36",
@@ -149,7 +149,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: ["Rose Sagebrush", "Roman Sagebrush"],
+      name: ["Taylor Sagebrush"],
       description: "Reporter at Heart of the West Gazette",
       img: WesternCharacterSeven,
       id: "45aa3daa-8f19-4b35-907d-d1b60582621b",
@@ -165,7 +165,7 @@ export const getCharacters = () => {
       ],
     },
     {
-      name: ["Sheriff Jerry Hardlaw", "Sheriff Jill Hardlaw"],
+      name: ["Sheriff Hardlaw"],
       description: "Local County Sheriff",
       img: WesternCharacterEight,
       id: "05290c63-678c-405c-9d3a-6d646b6d018a",
