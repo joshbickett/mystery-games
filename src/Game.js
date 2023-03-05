@@ -16,7 +16,7 @@ export const Game = ({ game, setGame }) => {
     <Container>
       <Instructions />
       <CharacterContainer>
-        <h1>1. Characters</h1>
+        <h1>Characters</h1>
         <Characters navigateToCharacter={navigateToCharacter} />
       </CharacterContainer>
       <GameProps />

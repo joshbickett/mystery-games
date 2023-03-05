@@ -93,7 +93,9 @@ export const Instructions = () => {
           </InstructionSubText>
         </SplitLeft>
         <SplitRight style={{ backgroundColor: "rgb(236, 236, 236)" }}>
-          <h1 style={{ padding: 0, margin: "10px 0" }}>What you'll need</h1>
+          <h1 style={{ padding: 0, margin: "10px 0", textAlign: "center" }}>
+            What you'll need
+          </h1>
           <p style={{ margin: "10px" }}>7 - 9 Players including yourself</p>
           <p style={{ margin: "10px" }}>A printer</p>
           <p style={{ margin: "10px" }}>Just read the instructions</p>

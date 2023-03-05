@@ -182,3 +182,13 @@ export const getCharacters = () => {
     },
   ];
 };
+
+export const getGameProps = () => {
+  return [
+    {
+      name: "Key to the Bar",
+      description: "This is a key to the bar",
+      img: WesternCharacterTwo,
+    },
+  ];
+};
