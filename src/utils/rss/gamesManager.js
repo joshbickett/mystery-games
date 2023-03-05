@@ -10,7 +10,8 @@ import WesternCharacterFive from "../../images/character-5.jpeg";
 import WesternCharacterSix from "../../images/character-6.jpeg";
 import WesternCharacterSeven from "../../images/character-7.jpeg";
 import WesternCharacterEight from "../../images/character-8.jpeg";
-import CowboysImg from "../../images/cowboys.jpeg";
+import Key from "../../images/key.jpeg";
+import Barn from "../../images/barn.jpeg";
 
 // const gameArray = [
 //   "Night at the Opera",
@@ -188,7 +189,12 @@ export const getGameProps = () => {
     {
       name: "Key to the Bar",
       description: "This is a key to the bar",
-      img: WesternCharacterTwo,
+      img: Key,
+    },
+    {
+      name: "The barn that for the players to open",
+      description: "This is a key to the bar",
+      img: Barn,
     },
   ];
 };

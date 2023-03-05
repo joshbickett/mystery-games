@@ -29,6 +29,7 @@ export const Instructions = () => {
           <InstructionText>
             <strong>1.</strong> Choose a location for the game
           </InstructionText>
+
           <InstructionText>
             <strong>2.</strong> Decide how many players will be playing
           </InstructionText>
@@ -57,7 +58,11 @@ export const Instructions = () => {
             of print offs, that is a welcomed and fun idea as well.
           </InstructionSubText>
           <InstructionText>
-            <strong>5.</strong> Check with the group if there are questions
+            <strong>5.</strong> Drawn a simple clue on the Map
+          </InstructionText>
+          <InstructionSubText>_</InstructionSubText>
+          <InstructionText>
+            <strong>6.</strong> Check with the group if there are questions
           </InstructionText>
           <InstructionSubText>
             In the character cards you sent each player there is instructions on
@@ -67,14 +72,14 @@ export const Instructions = () => {
             other players.
           </InstructionSubText>
           <InstructionText>
-            <strong>6.</strong> Start the game!
+            <strong>7.</strong> Start the game!
           </InstructionText>
           <InstructionSubText>
             We recommend the game is played over a 2 hour period, but you may
             adjust it to be shorter or longer depending on the group.
           </InstructionSubText>
           <InstructionText>
-            <strong>7.</strong> You may answer one yes or no question
+            <strong>8.</strong> You may answer one yes or no question
           </InstructionText>
           <InstructionSubText>
             As the fortune teller, each player may ask you *one* yes or no
@@ -83,7 +88,7 @@ export const Instructions = () => {
             struggling to find the villian, motive, and method.
           </InstructionSubText>
           <InstructionText>
-            <strong>8.</strong> Get into character and enjoy yourself
+            <strong>9.</strong> Get into character and enjoy yourself
           </InstructionText>
           <InstructionSubText>
             Though you are the game host, you are also a character in the game
@@ -98,6 +103,7 @@ export const Instructions = () => {
           </h1>
           <p style={{ margin: "10px" }}>7 - 9 Players including yourself</p>
           <p style={{ margin: "10px" }}>A printer</p>
+          <p style={{ margin: "10px" }}>A pen or pencil</p>
           <p style={{ margin: "10px" }}>Just read the instructions</p>
         </SplitRight>
       </SplitContainer>

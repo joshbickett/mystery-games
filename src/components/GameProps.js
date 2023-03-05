@@ -8,35 +8,36 @@ export const GameProps = ({ preview, navigateToCharacter }) => {
   return (
     <Container>
       <h1>Game Props</h1>
-      <PropContainer></PropContainer>
-      {props.map((character, index) => {
-        return (
-          <CharacterContainer>
-            {!preview && (
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  width: "100%",
-                }}
-              >
-                <FlexContainer>
-                  <PrintCardButton>Print</PrintCardButton>
-                </FlexContainer>
-              </div>
-            )}
-            <CharacterImage src={character.img} alt={`char${index}`} />
-            <InnerCharacterContainer>
-              <h4 style={{ textAlign: "center", margin: 5 }}>
-                {character.name[0]}
-              </h4>
-              <p style={{ textAlign: "center", margin: 0 }}>
-                {character.description}
-              </p>
-            </InnerCharacterContainer>
-          </CharacterContainer>
-        );
-      })}
+      <PropContainer>
+        {props.map((character, index) => {
+          return (
+            <CharacterContainer>
+              {!preview && (
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    width: "100%",
+                  }}
+                >
+                  <FlexContainer>
+                    <PrintCardButton>Print</PrintCardButton>
+                  </FlexContainer>
+                </div>
+              )}
+              <CharacterImage src={character.img} alt={`char${index}`} />
+              <InnerCharacterContainer>
+                <h4 style={{ textAlign: "center", margin: 5 }}>
+                  {character.name[0]}
+                </h4>
+                <p style={{ textAlign: "center", margin: 0 }}>
+                  {character.description}
+                </p>
+              </InnerCharacterContainer>
+            </CharacterContainer>
+          );
+        })}
+      </PropContainer>
     </Container>
   );
 };
