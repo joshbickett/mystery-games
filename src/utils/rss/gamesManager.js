@@ -12,6 +12,7 @@ import WesternCharacterSeven from "../../images/character-7.jpeg";
 import WesternCharacterEight from "../../images/character-8.jpeg";
 import Key from "../../images/key.jpeg";
 import Barn from "../../images/barn.jpeg";
+import Map from "../../images/map.jpeg";
 
 // const gameArray = [
 //   "Night at the Opera",
@@ -97,11 +98,11 @@ export const getCharacters = () => {
       antagonist: true,
       trust: [
         "You’ve done it, don’t get caught!!!",
-        "Who => You stole, Bucky, the once prized stallion from Rusty Spur Ranch.",
+        "Who => You sedated and stole, Bucky, the once prized stallion from Rusty Spur Ranch.",
         "Why => Money! Bucky's sale could set you up well to start over in another town. ",
         "How => You made a deal with a horse acquirer a few towns east to buy Buck for a pretty penny. You received a telegram that the horse rescue is on its way. You used home made horse tranquilizer, to put Bucky to sleep and make the sale later today.",
-        "You are hoping to pin the horse disappearance on other suspicious townsfolk. ",
-        "You and Bob 'bull' Rider have been at odds lately. You believed in a free spirit approach, by letting the cattle roam and trusting in their instincts while Bob wants to keep a close eye on the cattle",
+        "You think you may have left the horse sedation in the barn, you are hoping townsfolk don’t notice. You are hoping to pin the horse disappearance on other suspicious townsfolk.",
+        "You and Bobbie 'bull' Rider have been at odds lately. You believed in a free spirit approach, by letting the cattle roam and trusting in their instincts while Bobbie wants to keep a close eye on the cattle",
       ],
     },
     {
@@ -111,7 +112,7 @@ export const getCharacters = () => {
       id: "cf65eadb-9879-4c4c-8884-82ec3669c560",
       shareable: [
         "You’re the new guy at Rusty Spur Ranch",
-        "Cowboy Tex Ace has been training you. He’s complaining lately Bob 'bull' Rider stick approach of keeping a close eye on cattle and prefers to let the cattle roam and trust in their instincts.",
+        "Cowboy Tex Ace has been training you. He’s complaining lately Bobbie 'bull' Rider stick approach of keeping a close eye on cattle and prefers to let the cattle roam and trust in their instincts.",
         "You were incharge of the ranch this morning while Rancher Rusty Spur and Cowboy Tex Ace went into town ",
       ],
       trust: [
@@ -192,9 +193,14 @@ export const getGameProps = () => {
       img: Key,
     },
     {
-      name: "The barn that for the players to open",
+      name: "The Barn",
       description: "This is a key to the bar",
       img: Barn,
+    },
+    {
+      name: "The Map",
+      description: "This map has the location of the potato fields",
+      img: Map,
     },
   ];
 };
